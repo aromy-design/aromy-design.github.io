@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Emanuele — Portfolio</title>
+  <meta name="description" content="Portfolio di grafica, 3D e R&D AI. Selezione di lavori.">
+  <meta property="og:title" content="Emanuele — Portfolio">
+  <meta property="og:description" content="Branding, poster, 3D, motion.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/hero.webp">
+  <style>
+    :root{--fg:#111;--bg:#fff;--muted:#666}
+    *{box-sizing:border-box}
+    body{margin:0;font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto;background:var(--bg);color:var(--fg)}
+    header{padding:56px 20px 24px;text-align:center}
+    header img{max-width:1200px;width:100%;height:auto;border-radius:14px}
+    header h1{margin:20px 0 8px;font-size:clamp(28px,4vw,40px)}
+    header p{margin:0;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;padding:24px;max-width:1200px;margin:0 auto}
+    figure{margin:0;cursor:zoom-in}
+    img.thumb{width:100%;height:auto;display:block;border-radius:12px}
+    .cap{font-size:.9rem;color:var(--muted);margin:8px 2px 0}
+    footer{padding:40px 20px;text-align:center;color:var(--muted)}
+    dialog{border:0;border-radius:12px;padding:0;max-width:95vw}
+    dialog::backdrop{background:rgba(0,0,0,.75)}
+    #lightbox img{max-width:95vw;max-height:85vh;display:block;border-radius:12px}
+    a{color:inherit}
+  </style>
+</head>
+<body>
+<header>
+  <img src="assets/hero.webp" alt="Selezione lavori">
+  <h1>Emanuele — Portfolio</h1>
+  <p>Branding, poster, 3D, motion design.</p>
+</header>
+
+<main class="grid" id="gallery">
+  <figure>
+    <img class="thumb" loading="lazy" src="assets/work-01.webp" width="1200" height="800" alt="Wonderland 2025 — Poster">
+    <figcaption class="cap">Wonderland 2025 — Poster</figcaption>
+  </figure>
+  <figure>
+    <img class="thumb" loading="lazy" src="assets/work-02.webp" width="1200" height="800" alt="Pulsar Week — Branding">
+    <figcaption class="cap">Pulsar Week — Branding</figcaption>
+  </figure>
+</main>
+
+<dialog id="lightbox"><img alt=""></dialog>
+<footer>© <span id="year"></span> Emanuele · <a href="mailto:you@example.com">you@example.com</a></footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const lb = document.getElementById('lightbox'), img = lb.querySelector('img');
+  document.getElementById('gallery').addEventListener('click', e=>{
+    const t = e.target.closest('img.thumb'); if(!t) return;
+    img.src = t.src; img.alt = t.alt; lb.showModal();
+  });
+  lb.addEventListener('click', ()=>lb.close());
+</script>
+</body>
+</html>
