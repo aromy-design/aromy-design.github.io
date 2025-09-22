@@ -9672,4 +9672,51 @@ h3, .h3 {
   line-height: 1.2 !important;
 }
 
+/* --- MENU HEADER --- */
+.tt-main-menu .tt-main-menu-list > li > a,
+.tt-main-menu .tt-submenu-trigger > a {
+  font-family: var(--tt-alter-font) !important;
+  font-weight: 600 !important;
+  font-size: clamp(10px, 0.9vw, 14px) !important;
+  line-height: 1.2 !important;
+}
+
+/* Voci del sottomenu di Work */
+.tt-submenu .tt-submenu-list a {
+  font-family: var(--tt-alter-font) !important;
+  font-weight: 600 !important;
+  font-size: clamp(10px, 0.85vw, 13px) !important;
+}
+
+/* --- "SKILL" / SERVICES (accordion) --- */
+.tt-accordion .tt-ac-head-title {
+  font-family: var(--tt-alter-font) !important;
+  font-weight: 600 !important;
+  font-size: clamp(12px, 1.2vw, 18px) !important;
+  line-height: 1.2 !important;
+}
+
+/* --- VARI TESTI CHE RESTAVANO GRANDI --- */
+.tt-heading-subtitle,
+.ph-caption-subtitle,
+.pgi-category {
+  font-size: clamp(10px, 0.9vw, 12px) !important;
+}
+
+.pgi-title, .pgi-title a {
+  font-size: clamp(12px, 1.2vw, 16px) !important;
+}
+
+.tt-btn span {
+  font-size: clamp(10px, 0.9vw, 13px) !important;
+}
+
+/* Footer */
+#tt-footer .tt-footer-widget-heading {
+  font-size: clamp(10px, 1vw, 14px) !important;
+}
+#tt-footer a,
+#tt-footer .tt-footer-copyright {
+  font-size: clamp(10px, 0.9vw, 13px) !important;
+}
 
