@@ -9593,11 +9593,29 @@ svg.tt-stt-progress-circle path {
 }
 
 
-/* ------------------------------------------------------------- */
-/* ------------------------------------------------------------- */
-/* ------------------------------------------------------------- */
-/* ------------------------------------------------------------- */
-/* dimensioni titoli globali +50% */
+/* ============================================================
+   SCALING UNICO PER TUTTI I TESTI CON FONT ALTER SECONDARIO
+   ============================================================ */
+:root {
+  --tt-alter-scale: 0.75; /* 1 = originale, <1 riduce, >1 ingrandisce */
+}
 
+.ph-caption-title,
+.tt-heading-title,
+.pgi-title,
+.ph-caption-subtitle,
+.tt-heading-subtitle,
+.pgi-category,
+.tt-btn span,
+.tt-big-round-ptn-inner,
+.tt-footer-widget-heading,
+.tt-footer-widget-list a,
+#tt-footer a,
+#tt-footer .tt-footer-copyright,
+.tt-main-menu-list > li > a,
+.tt-submenu-list > li > a,
+.tt-accordion .tt-ac-head-title {
+  font-size: calc(1em * var(--tt-alter-scale)) !important;
+}
 
 
