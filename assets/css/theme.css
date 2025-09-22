@@ -9633,3 +9633,43 @@ h3, .h3 {
   font-size: 0.7em !important; 
 }
 
+/* fattore di riduzione unico per tutti i testi "alter" non-captions */
+:root { --tt-alter-scale: .75; } /* 0.75 = 75% della dimensione attuale */
+
+/* NAVBAR + SUBMENU */
+.tt-main-menu-list > li > a,
+.tt-submenu-list > li > a {
+  font-family: var(--tt-alter-font) !important;
+  font-weight: 600 !important;
+  font-size: calc(1rem * var(--tt-alter-scale)) !important;
+  line-height: 1.1 !important;
+}
+
+/* SOTTOTITOLI GRANDI e TESTI "alter" secondari */
+.ph-caption-subtitle,
+.tt-heading-subtitle,
+.pgi-title {
+  font-family: var(--tt-alter-font) !important;
+  font-weight: 600 !important;
+  font-size: calc(1rem * var(--tt-alter-scale)) !important;
+  line-height: 1.1 !important;
+}
+
+/* BOTTONI (testo interno) */
+.tt-btn span,
+.tt-big-round-ptn-inner {
+  font-family: var(--tt-alter-font) !important;
+  font-weight: 600 !important;
+  font-size: calc(1rem * var(--tt-alter-scale)) !important;
+}
+
+/* FOOTER: titoli e link */
+.tt-footer-widget-heading,
+.tt-footer-widget-list a {
+  font-family: var(--tt-alter-font) !important;
+  font-weight: 600 !important;
+  font-size: calc(1rem * var(--tt-alter-scale)) !important;
+  line-height: 1.2 !important;
+}
+
+
