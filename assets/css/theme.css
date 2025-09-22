@@ -9598,14 +9598,14 @@ svg.tt-stt-progress-circle path {
 
 
 
-/* se il tema usa le var per le dimensioni, riducile qui */
+/* dimensioni titoli globali */
 :root{
-  --tt-h1-size: clamp(36px, 5.2vw, 72px);
-  --tt-h2-size: clamp(30px, 4.2vw, 56px);
-  --tt-h3-size: clamp(24px, 3.2vw, 42px);
+  --tt-h1-size: clamp(28px, 4vw, 58px);
+  --tt-h2-size: clamp(24px, 3.4vw, 46px);
+  --tt-h3-size: clamp(20px, 2.8vw, 36px);
 }
 
-/* hard override delle dimensioni dei titoli (copre i casi senza var) */
+/* override titoli con font Zalando Sans Expanded */
 .ph-caption-title,
 .tt-heading-title,
 .pgi-title,
@@ -9615,21 +9615,21 @@ h3, .h3 {
   font-family: var(--tt-alter-font) !important;
   line-height: 1.05 !important;
   letter-spacing: 0.01em !important;
+  font-weight: 600 !important;
 }
 
 /* dimensioni più contenute per i vari contesti */
-.ph-caption-title { font-size: clamp(34px, 5vw, 68px) !important; }
-.tt-heading-xxxlg .tt-heading-title { font-size: clamp(32px, 4.5vw, 60px) !important; }
-.tt-heading-xxlg .tt-heading-title { font-size: clamp(28px, 4vw, 52px) !important; }
-.tt-heading-xlg  .tt-heading-title { font-size: clamp(26px, 3.6vw, 46px) !important; }
-.tt-heading-lg   .tt-heading-title { font-size: clamp(24px, 3.2vw, 40px) !important; }
-.pgi-title { font-size: clamp(18px, 2.4vw, 28px) !important; }
+.ph-caption-title { font-size: clamp(26px, 4vw, 54px) !important; }
+.tt-heading-xxxlg .tt-heading-title { font-size: clamp(24px, 3.5vw, 48px) !important; }
+.tt-heading-xxlg .tt-heading-title { font-size: clamp(22px, 3.2vw, 42px) !important; }
+.tt-heading-xlg  .tt-heading-title { font-size: clamp(20px, 3vw, 38px) !important; }
+.tt-heading-lg   .tt-heading-title { font-size: clamp(18px, 2.6vw, 34px) !important; }
+.pgi-title       { font-size: clamp(16px, 2vw, 24px) !important; }
 
-/* opzionale: stringi un filo i sottotitoli grandi */
+/* sottotitoli più equilibrati */
 .ph-caption-subtitle,
-.tt-heading-subtitle { letter-spacing: 0 !important; }
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--tt-alter-font);
-  font-weight: 600;
+.tt-heading-subtitle { 
+  letter-spacing: 0 !important; 
+  font-size: 0.85em !important; /* leggermente ridotti */
 }
+
