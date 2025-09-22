@@ -2350,7 +2350,7 @@ body.is-mobile .ph-mask {
 	display: block;
 	left: 50%;
 	top: 50%;
-	font-size: 19px;
+	font-size: 15px;
 	color: var(--tt-text-color);
 	transform: translate(-50%, -50%);
 }
