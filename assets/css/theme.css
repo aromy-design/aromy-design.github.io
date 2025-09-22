@@ -90,7 +90,7 @@
 
 	/* Fonts */
 	--tt-body-font: 'Poppins', sans-serif; /* Body font. */
-	--tt-alter-font: "Oscan-Expanded", sans-serif; /* Secondary/Alter font. */
+	--tt-alter-font: 'Zalando Sans Expanded', sans-serif; /* Secondary/Alter font. */
 
 	/* Page transition */
 	--tt-page-trans-overlay-bg-color: #161616; /* Page transition overlay background color. #161616 */
