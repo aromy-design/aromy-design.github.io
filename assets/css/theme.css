@@ -73,7 +73,7 @@
 /* ------------------------------------------------------------- */
 
 @font-face {
-  font-family: 'Oscan Expanded';
+  font-family: 'Oscan-Expanded';
   src: url('assets/fonts/Oscan Expanded.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
@@ -95,7 +95,7 @@
 
 	/* Fonts */
 	--tt-body-font: 'Poppins', sans-serif; /* Body font. */
-	--tt-alter-font: "Oscan Expanded", sans-serif; /* Secondary/Alter font. */
+	--tt-alter-font: "Oscan-Expanded", sans-serif; /* Secondary/Alter font. */
 
 	/* Page transition */
 	--tt-page-trans-overlay-bg-color: #161616; /* Page transition overlay background color. #161616 */
@@ -9596,3 +9596,44 @@ svg.tt-stt-progress-circle path {
 	stroke: var(--tt-light-color);
 	stroke-width: 4;
 }
+
+/* === TITOLI in Oscan + dimensioni ridotte === */
+
+/* Titoli generici dei blocchi "tt-heading" */
+.tt-heading .tt-heading-title {
+  font-family: var(--tt-alter-font);     /* Oscan */
+  line-height: 1.05;
+  letter-spacing: .02em;
+  font-size: clamp(28px, 5vw, 58px);     /* prima era più grande */
+}
+
+/* Varianti dimensione dei "tt-heading" */
+.tt-heading-xlg .tt-heading-title   { font-size: clamp(32px, 6vw, 72px); }
+.tt-heading-xxlg .tt-heading-title  { font-size: clamp(36px, 7vw, 88px); }
+.tt-heading-xxxlg .tt-heading-title { font-size: clamp(40px, 8vw, 104px); }
+
+/* Titolo grande in alto nelle pagine (hero) */
+.ph-caption-title {
+  font-family: var(--tt-alter-font);     /* Oscan */
+  line-height: 1.03;
+  letter-spacing: .01em;
+  font-size: clamp(36px, 8vw, 96px);     /* ridotto rispetto al tema */
+}
+
+/* Titoli dei progetti nelle griglie/portfolio */
+.pgi-title,
+.pli-title {
+  font-family: var(--tt-alter-font);     /* Oscan */
+  line-height: 1.08;
+  font-size: clamp(18px, 2.4vw, 28px);
+}
+
+/* Evita tagli nelle box quando il font è alto */
+.tt-heading .tt-heading-title,
+.ph-caption-title,
+.pgi-title,
+.pli-title {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
