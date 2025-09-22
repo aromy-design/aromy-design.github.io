@@ -2318,8 +2318,8 @@ body.is-mobile .ph-mask {
 .tt-scroll-down-inner {
 	position: relative;
 	display: block;
-	width: 240px;
-	height: 240px;
+	width: 180px;
+	height: 180px;
 }
 #page-header:not(.ph-full) .tt-scroll-down-inner { 
 	width: 50px;
