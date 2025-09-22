@@ -72,6 +72,15 @@
  * Global variables
 /* ------------------------------------------------------------- */
 
+@font-face {
+  font-family: 'MioFont';
+  src: url('assets/fonts/Oscan Expanded.ttf') format('woff2'),
+       url('assets/fonts/Oscan Expanded.ttf') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 :root {
 	/* General */
 	--tt-main-color: #e60000; /* Template main color. #bf4a1a */
@@ -87,7 +96,7 @@
 
 	/* Fonts */
 	--tt-body-font: 'Poppins', sans-serif; /* Body font. */
-	--tt-alter-font: "Big Shoulders Display", sans-serif; /* Secondary/Alter font. */
+	--tt-alter-font: "Oscan Expanded", sans-serif; /* Secondary/Alter font. */
 
 	/* Page transition */
 	--tt-page-trans-overlay-bg-color: #161616; /* Page transition overlay background color. #161616 */
