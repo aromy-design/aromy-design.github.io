@@ -9601,10 +9601,7 @@ svg.tt-stt-progress-circle path {
 
 /* === Titoli in Oscan ma più piccoli === */
 
-/* assicura il font alternativo */
-:root{
-  --tt-alter-font: 'Oscan-Expanded', sans-serif;
-}
+
 
 /* se il tema usa le var per le dimensioni, riducile qui */
 :root{
