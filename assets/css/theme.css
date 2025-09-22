@@ -9593,16 +9593,15 @@ svg.tt-stt-progress-circle path {
 }
 
 
-
-/* === Titoli in Oscan ma più piccoli === */
-
-
-
-/* dimensioni titoli globali dimezzate */
+/* ------------------------------------------------------------- */
+/* ------------------------------------------------------------- */
+/* ------------------------------------------------------------- */
+/* ------------------------------------------------------------- */
+/* dimensioni titoli globali +15% */
 :root{
-  --tt-h1-size: clamp(18px, 2.6vw, 36px);
-  --tt-h2-size: clamp(15px, 2.1vw, 28px);
-  --tt-h3-size: clamp(12px, 1.6vw, 20px);
+  --tt-h1-size: clamp(21px, 3vw, 41px);
+  --tt-h2-size: clamp(17px, 2.4vw, 32px);
+  --tt-h3-size: clamp(14px, 1.9vw, 23px);
 }
 
 /* override titoli con font Zalando Sans Expanded */
@@ -9618,23 +9617,23 @@ h3, .h3 {
   font-weight: 600 !important;
 }
 
-/* dimensioni più contenute per i vari contesti dimezzate */
-.ph-caption-title { font-size: clamp(17px, 2.5vw, 34px) !important; }
-.tt-heading-xxxlg .tt-heading-title { font-size: clamp(16px, 2.3vw, 30px) !important; }
-.tt-heading-xxlg .tt-heading-title { font-size: clamp(15px, 2.1vw, 26px) !important; }
-.tt-heading-xlg  .tt-heading-title { font-size: clamp(14px, 1.9vw, 24px) !important; }
-.tt-heading-lg   .tt-heading-title { font-size: clamp(13px, 1.8vw, 22px) !important; }
-.pgi-title       { font-size: clamp(12px, 1.6vw, 18px) !important; }
+/* dimensioni più contenute per i vari contesti +15% */
+.ph-caption-title { font-size: clamp(20px, 2.9vw, 39px) !important; }
+.tt-heading-xxxlg .tt-heading-title { font-size: clamp(18px, 2.6vw, 35px) !important; }
+.tt-heading-xxlg .tt-heading-title { font-size: clamp(17px, 2.4vw, 30px) !important; }
+.tt-heading-xlg  .tt-heading-title { font-size: clamp(16px, 2.2vw, 28px) !important; }
+.tt-heading-lg   .tt-heading-title { font-size: clamp(15px, 2.1vw, 25px) !important; }
+.pgi-title       { font-size: clamp(14px, 1.9vw, 21px) !important; }
 
 /* sottotitoli più equilibrati e ridotti */
 .ph-caption-subtitle,
 .tt-heading-subtitle { 
   letter-spacing: 0 !important; 
-  font-size: 0.7em !important; 
+  font-size: 0.8em !important; /* era 0.7em → +15% */
 }
 
 /* fattore di riduzione unico per tutti i testi "alter" non-captions */
-:root { --tt-alter-scale: .75; } /* 0.75 = 75% della dimensione attuale */
+:root { --tt-alter-scale: 0.86; } /* era 0.75 → +15% */
 
 /* NAVBAR + SUBMENU */
 .tt-main-menu-list > li > a,
@@ -9677,7 +9676,7 @@ h3, .h3 {
 .tt-main-menu .tt-submenu-trigger > a {
   font-family: var(--tt-alter-font) !important;
   font-weight: 600 !important;
-  font-size: clamp(10px, 0.9vw, 14px) !important;
+  font-size: clamp(12px, 1vw, 16px) !important;
   line-height: 1.2 !important;
 }
 
@@ -9685,14 +9684,14 @@ h3, .h3 {
 .tt-submenu .tt-submenu-list a {
   font-family: var(--tt-alter-font) !important;
   font-weight: 600 !important;
-  font-size: clamp(10px, 0.85vw, 13px) !important;
+  font-size: clamp(12px, 0.98vw, 15px) !important;
 }
 
 /* --- "SKILL" / SERVICES (accordion) --- */
 .tt-accordion .tt-ac-head-title {
   font-family: var(--tt-alter-font) !important;
   font-weight: 600 !important;
-  font-size: clamp(12px, 1.2vw, 18px) !important;
+  font-size: clamp(14px, 1.4vw, 21px) !important;
   line-height: 1.2 !important;
 }
 
@@ -9700,23 +9699,23 @@ h3, .h3 {
 .tt-heading-subtitle,
 .ph-caption-subtitle,
 .pgi-category {
-  font-size: clamp(10px, 0.9vw, 12px) !important;
+  font-size: clamp(12px, 1vw, 14px) !important;
 }
 
 .pgi-title, .pgi-title a {
-  font-size: clamp(12px, 1.2vw, 16px) !important;
+  font-size: clamp(14px, 1.4vw, 18px) !important;
 }
 
 .tt-btn span {
-  font-size: clamp(10px, 0.9vw, 13px) !important;
+  font-size: clamp(12px, 1vw, 15px) !important;
 }
 
 /* Footer */
 #tt-footer .tt-footer-widget-heading {
-  font-size: clamp(10px, 1vw, 14px) !important;
+  font-size: clamp(12px, 1.15vw, 16px) !important;
 }
 #tt-footer a,
 #tt-footer .tt-footer-copyright {
-  font-size: clamp(10px, 0.9vw, 13px) !important;
+  font-size: clamp(12px, 1vw, 15px) !important;
 }
 
