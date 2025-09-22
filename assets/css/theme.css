@@ -73,9 +73,8 @@
 /* ------------------------------------------------------------- */
 
 @font-face {
-  font-family: 'MioFont';
-  src: url('assets/fonts/Oscan Expanded.ttf') format('woff2'),
-       url('assets/fonts/Oscan Expanded.ttf') format('woff');
+  font-family: 'Oscan Expanded';
+  src: url('assets/fonts/Oscan Expanded.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
