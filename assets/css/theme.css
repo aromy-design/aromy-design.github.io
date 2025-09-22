@@ -9598,11 +9598,11 @@ svg.tt-stt-progress-circle path {
 
 
 
-/* dimensioni titoli globali */
+/* dimensioni titoli globali dimezzate */
 :root{
-  --tt-h1-size: clamp(28px, 4vw, 58px);
-  --tt-h2-size: clamp(24px, 3.4vw, 46px);
-  --tt-h3-size: clamp(20px, 2.8vw, 36px);
+  --tt-h1-size: clamp(18px, 2.6vw, 36px);
+  --tt-h2-size: clamp(15px, 2.1vw, 28px);
+  --tt-h3-size: clamp(12px, 1.6vw, 20px);
 }
 
 /* override titoli con font Zalando Sans Expanded */
@@ -9613,23 +9613,23 @@ h1, .h1,
 h2, .h2,
 h3, .h3 {
   font-family: var(--tt-alter-font) !important;
-  line-height: 1.05 !important;
+  line-height: 1.1 !important;
   letter-spacing: 0.01em !important;
   font-weight: 600 !important;
 }
 
-/* dimensioni più contenute per i vari contesti */
-.ph-caption-title { font-size: clamp(26px, 4vw, 54px) !important; }
-.tt-heading-xxxlg .tt-heading-title { font-size: clamp(24px, 3.5vw, 48px) !important; }
-.tt-heading-xxlg .tt-heading-title { font-size: clamp(22px, 3.2vw, 42px) !important; }
-.tt-heading-xlg  .tt-heading-title { font-size: clamp(20px, 3vw, 38px) !important; }
-.tt-heading-lg   .tt-heading-title { font-size: clamp(18px, 2.6vw, 34px) !important; }
-.pgi-title       { font-size: clamp(16px, 2vw, 24px) !important; }
+/* dimensioni più contenute per i vari contesti dimezzate */
+.ph-caption-title { font-size: clamp(17px, 2.5vw, 34px) !important; }
+.tt-heading-xxxlg .tt-heading-title { font-size: clamp(16px, 2.3vw, 30px) !important; }
+.tt-heading-xxlg .tt-heading-title { font-size: clamp(15px, 2.1vw, 26px) !important; }
+.tt-heading-xlg  .tt-heading-title { font-size: clamp(14px, 1.9vw, 24px) !important; }
+.tt-heading-lg   .tt-heading-title { font-size: clamp(13px, 1.8vw, 22px) !important; }
+.pgi-title       { font-size: clamp(12px, 1.6vw, 18px) !important; }
 
-/* sottotitoli più equilibrati */
+/* sottotitoli più equilibrati e ridotti */
 .ph-caption-subtitle,
 .tt-heading-subtitle { 
   letter-spacing: 0 !important; 
-  font-size: 0.85em !important; /* leggermente ridotti */
+  font-size: 0.7em !important; 
 }
 
