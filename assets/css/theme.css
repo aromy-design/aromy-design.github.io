@@ -4634,7 +4634,7 @@ a.tt-logo-wall-item:hover {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	padding: clamp(10%, 3vw, 50px);
+	padding: clamp(10%, 1vw, 50px);
 }
 
 
