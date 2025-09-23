@@ -847,7 +847,7 @@ h6.tt-text-uppercase {
 
 /* size xxxlg */
 .tt-heading.tt-heading-xxxlg .tt-heading-title {
-	font-size: clamp(64px, 10vw, 187px);
+	font-size: clamp(64px, 10vw, 74px);
 }
 @media (min-width: 992px) {
 	.tt-heading.tt-heading-xxxlg .tt-heading-subtitle {
