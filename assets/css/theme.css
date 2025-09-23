@@ -4286,7 +4286,7 @@ body:not(.is-mobile) .tt-btn:hover .tt-btn-line {
 	text-transform: uppercase;
 	text-align: center;
 	font-family: var(--tt-alter-font);
-	font-size: clamp(21px, 2vw, 28px);
+	font-size: clamp(15px, 2vw, 21px);
 	font-weight: 600;
 	color: var(--tt-text-color);
 	line-height: 1.1;
@@ -9455,7 +9455,7 @@ body.is-mobile .tt-avlist-item:focus {
 	margin-bottom: 34px;
 	text-transform: uppercase;
 	font-family: var(--tt-alter-font);
-	font-size: clamp(38px, 4vw, 58px);
+	font-size: clamp(25px, 4vw, 25px);
 	font-weight: bold;
 	font-weight: 600;
 	color: var(--tt-text-color);
