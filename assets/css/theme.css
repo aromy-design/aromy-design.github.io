@@ -9593,12 +9593,6 @@ svg.tt-stt-progress-circle path {
 }
 
 
-/* ============================================================
-   SCALING UNICO PER TUTTI I TESTI CON FONT ALTER SECONDARIO
-   ============================================================ */
-:root {
-  --tt-alter-scale: 0.75; /* 1 = originale, <1 riduce, >1 ingrandisce */
-}
 
 
 
