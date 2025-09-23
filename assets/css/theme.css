@@ -2398,8 +2398,8 @@ body.is-mobile .ph-mask {
 	}
 }
 .tt-scroll-down text { 
-	font-family: var(--tt-alter-font);
-	font-size: 24px;
+	font-family: var(--tt-body-font);
+	font-size: 32px;
 	font-weight: 600;
 	text-transform: uppercase;
 	letter-spacing: 14px;
