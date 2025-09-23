@@ -833,7 +833,7 @@ h6.tt-text-uppercase {
 
 /* size xxlg */
 .tt-heading.tt-heading-xxlg .tt-heading-title {
-	font-size: clamp(52px, 6vw, 110px);
+	font-size: clamp(20px, 6vw, 40px);
 }
 @media (min-width: 992px) {
 	.tt-heading.tt-heading-xxlg .tt-heading-subtitle {
@@ -865,7 +865,7 @@ h6.tt-text-uppercase {
 /* ----------------------------------------------------------------------------------------- */
 
 .tt-wrap {
-	max-width: 1282px;
+	max-width: 1100px;
 	margin-left: auto;
 	margin-right: auto;
 	padding-left: 15px;
@@ -4325,7 +4325,7 @@ body:not(.is-mobile) .tt-btn:hover .tt-btn-line {
 	.tt-big-round-ptn-inner {
 		width: 160px;
 		height: 160px;
-		font-size: 26px;
+		font-size: 15px;
 	}
 }
 
