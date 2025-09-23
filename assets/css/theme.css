@@ -6705,7 +6705,7 @@ a.pgi-category:hover {
 	.ttgr-layout-2-1 .pgi-title,
 	.ttgr-layout-creative-1 .pgi-title,
 	.ttgr-layout-creative-2 .pgi-title {
-		font-size: calc(24px + 1.3vw);
+		font-size: calc(0.5px + 1.3vw);
 	}
 
 	.ttgr-layout-3 .pgi-title,
