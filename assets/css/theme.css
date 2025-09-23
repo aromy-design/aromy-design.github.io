@@ -847,7 +847,7 @@ h6.tt-text-uppercase {
 
 /* size xxxlg */
 .tt-heading.tt-heading-xxxlg .tt-heading-title {
-	font-size: clamp(64px, 10vw, 74px);
+	font-size: clamp(30px, 10vw, 40px);
 }
 @media (min-width: 992px) {
 	.tt-heading.tt-heading-xxxlg .tt-heading-subtitle {
@@ -5142,7 +5142,7 @@ body:not(.is-mobile) .tt-accordion.tt-ac-hover .tt-accordion-item.active .tt-acc
 .tt-accordion.tt-ac-xxlg .tt-ac-head-title {
 	text-transform: uppercase;
 	font-family: var(--tt-alter-font);
-	font-size: clamp(42px, 6vw, 10px);
+	font-size: clamp(20px, 6vw, 30px);
 	font-weight: 600;
 	line-height: 1;
 }
@@ -6632,7 +6632,7 @@ video.pgi-video {
 	text-overflow: ellipsis;
 	text-transform: uppercase;
 	font-family: var(--tt-alter-font);
-	font-size: clamp(34px, 4vw, 64px);
+	font-size: clamp(10px, 4vw, 12px);
 	font-weight: bold;
 	font-weight: 600;
 	color: var(--tt-text-color);
