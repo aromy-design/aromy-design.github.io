@@ -4713,7 +4713,7 @@ a.tt-logo-wall-item:hover img {
 	padding: 10px 0;
 	text-transform: uppercase;
 	font-family: var(--tt-alter-font);
-	font-size: calc(21px + 5.5vw);
+	font-size: calc(21px + 2vw);
 	line-height: 1;
 	font-weight: bold;
 	font-weight: 600;
@@ -5142,7 +5142,7 @@ body:not(.is-mobile) .tt-accordion.tt-ac-hover .tt-accordion-item.active .tt-acc
 .tt-accordion.tt-ac-xxlg .tt-ac-head-title {
 	text-transform: uppercase;
 	font-family: var(--tt-alter-font);
-	font-size: clamp(42px, 6vw, 100px);
+	font-size: clamp(42px, 6vw, 10px);
 	font-weight: 600;
 	line-height: 1;
 }
