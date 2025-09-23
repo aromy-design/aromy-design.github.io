@@ -1351,7 +1351,7 @@ body:not(.tt-m-menu-open) #tt-header.tt-header-scroll.tt-fly-up {
 		display: block;
 		padding: 4px 0;
 		text-transform: uppercase;
-		font-family: var(--tt-alter-font);
+		font-family: var(--tt-body-font);
 		font-size: 15px;
 		font-weight: bold;
 		font-weight: 600;
