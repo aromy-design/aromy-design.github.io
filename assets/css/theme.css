@@ -1607,7 +1607,7 @@ body:not(.tt-m-menu-open) #tt-header.tt-header-scroll.tt-fly-up {
 		}
 		.tt-main-menu-list > li > a,
 		.tt-main-menu-list > li > .tt-submenu-trigger > a {
-			font-size: 38px;
+			font-size: 25px;
 		}
 	}
 
@@ -1765,11 +1765,11 @@ body:not(.tt-m-menu-open) #tt-header.tt-header-scroll.tt-fly-up {
 		transition: all 0.3s ease-in-out;
 	}
 	.tt-m-menu-toggle-btn span::before {
-		top: -4px;
+		top: -6px;
 	}
 	.tt-m-menu-toggle-btn span::after {
 		top: auto;
-		bottom: -4px;
+		bottom: -2px;
 	}
 
 	/* Toggle button text */
@@ -1780,7 +1780,7 @@ body:not(.tt-m-menu-open) #tt-header.tt-header-scroll.tt-fly-up {
 		text-transform: uppercase;
 		font-family: var(--tt-alter-font);
 		text-align: right;
-		font-size: 21px;
+		font-size: 15px;
 		font-weight: bold;
 		font-weight: 600;
 		color: var(--tt-text-color);
@@ -2000,7 +2000,7 @@ body:not(.tt-m-menu-open) #tt-header.tt-header-scroll.tt-fly-up {
 .ph-caption-subtitle {
 	margin-bottom: 40px;
 	text-transform: uppercase;
-	font-size: calc(20px + 0.2vw);
+	font-size: calc(14px + 0.2vw);
 	font-weight: 500;
 	letter-spacing: 1px;
 	line-height: 1.2;
@@ -2011,7 +2011,7 @@ body:not(.tt-m-menu-open) #tt-header.tt-header-scroll.tt-fly-up {
 	margin: 0;
 	text-transform: uppercase;
 	font-family: var(--tt-alter-font);
-	font-size: clamp(48px, 5vw, 82px);
+	font-size: clamp(48px, 4vw, 82px);
 	font-weight: bold;
 	font-weight: 600;
 	line-height: 0.95;
