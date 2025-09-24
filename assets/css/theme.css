@@ -2120,7 +2120,7 @@ a.ph-caption-category:hover {
 	font-size: clamp(64px, 8vw, 152px);
 }
 #page-header.ph-cap-xxxlg .ph-caption-title {
-	font-size: clamp(60px, 10vw, 60px);
+	font-size: clamp(60px, 10vw, 150px);
 	line-height: 0.95;
 }
 #page-header.ph-cap-xxxxlg .ph-caption-title {
