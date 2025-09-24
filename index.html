@@ -44,6 +44,20 @@
 		<!-- Light style CSS -->
 		<link rel="stylesheet" href="assets/css/theme-light.css">
 
+	  <link rel="stylesheet" href="assets/css/theme.css">
+	  <link rel="stylesheet" href="assets/css/theme-light.css">
+	
+	  <!-- Override CSS per logo wall -->
+	  <style>
+		.tt-logo-wall .tt-logo-wall-item { transition: background-color .3s ease-in-out; }
+		.tt-logo-wall .tt-logo-wall-item:hover { background-color: rgb(124 124 124 / 15%); }
+		.tt-logo-wall .tt-logo-wall-item img {
+		  transform: scale(1);
+		  transition: transform .3s ease-in-out, opacity .3s ease-in-out;
+		}
+		.tt-logo-wall .tt-logo-wall-item:hover img { transform: scale(1.1); }
+	  </style>
+		
 	</head>
 
 	
@@ -971,121 +985,48 @@
 					* Note: Each situation may be different and each section may need different classes according to your needs. More info about helper classes can be found in the file "helper.css".
 					-->
 					<div class="tt-section">
-						<div class="tt-section-inner tt-wrap">
-
-							<!-- Begin logo wall 
-							=====================
-							* Use class "tt-lw-col-2", "tt-lw-col-3" or "tt-lw-col-4" to change columns.
-							* Use class "tt-lw-bordered" to enable item bordered style.
-							* Note: For better results make sure all your images are in the same dimensions!
-							-->
-							<ul class="tt-logo-wall tt-anim-fadeinup">
-								<li>
-									<a href="javascript:void(0)" class="tt-logo-wall-item cursor-alter" role="button">
-
-										<div class="tt-lv-item-inner">
-											<img src="assets/img/clients/client-1-light.png" class="tt-lv-img-light" loading="lazy" alt="Image">
-											<img src="assets/img/clients/client-1-dark.png" class="tt-lv-img-dark" loading="lazy" alt="Image">
-										</div> <!-- /.tt-lv-item-inner -->
-									</a> <!-- /.tt-logo-wall-item -->
-								</li>
-								<li>
-									<a href="javascript:void(0)" class="tt-logo-wall-item cursor-alter" role="button">
-
-										<div class="tt-lv-item-inner">
-											<img src="assets/img/clients/client-2-light.png" class="tt-lv-img-light" loading="lazy" alt="Image">
-											<img src="assets/img/clients/client-2-dark.png" class="tt-lv-img-dark" loading="lazy" alt="Image">
-										</div> <!-- /.tt-lv-item-inner -->
-									</a> <!-- /.tt-logo-wall-item -->
-								</li>
-								<li>
-									<a href="javascript:void(0)" class="tt-logo-wall-item cursor-alter" role="button">
-
-										<div class="tt-lv-item-inner">
-											<img src="assets/img/clients/client-3-light.png" class="tt-lv-img-light" loading="lazy" alt="Image">
-											<img src="assets/img/clients/client-3-dark.png" class="tt-lv-img-dark" loading="lazy" alt="Image">
-										</div> <!-- /.tt-lv-item-inner -->
-									</a> <!-- /.tt-logo-wall-item -->
-								</li>
-								<li>
-									<a href="javascript:void(0)" class="tt-logo-wall-item cursor-alter" role="button">
-
-										<div class="tt-lv-item-inner">
-											<img src="assets/img/clients/client-4-light.png" class="tt-lv-img-light" loading="lazy" alt="Image">
-											<img src="assets/img/clients/client-4-dark.png" class="tt-lv-img-dark" loading="lazy" alt="Image">
-										</div> <!-- /.tt-lv-item-inner -->
-									</a> <!-- /.tt-logo-wall-item -->
-								</li>
-								<li>
-									<a href="javascript:void(0)" class="tt-logo-wall-item cursor-alter" role="button">
-
-										<div class="tt-lv-item-inner">
-											<img src="assets/img/clients/client-5-light.png" class="tt-lv-img-light" loading="lazy" alt="Image">
-											<img src="assets/img/clients/client-5-dark.png" class="tt-lv-img-dark" loading="lazy" alt="Image">
-										</div> <!-- /.tt-lv-item-inner -->
-									</a> <!-- /.tt-logo-wall-item -->
-								</li>
-								<li>
-									<a href="javascript:void(0)" class="tt-logo-wall-item cursor-alter" role="button">
-
-										<div class="tt-lv-item-inner">
-											<img src="assets/img/clients/client-6-light.png" class="tt-lv-img-light" loading="lazy" alt="Image">
-											<img src="assets/img/clients/client-6-dark.png" class="tt-lv-img-dark" loading="lazy" alt="Image">
-										</div> <!-- /.tt-lv-item-inner -->
-									</a> <!-- /.tt-logo-wall-item -->
-								</li>
-								<li>
-									<a href="javascript:void(0)" class="tt-logo-wall-item cursor-alter" role="button">
-
-										<div class="tt-lv-item-inner">
-											<img src="assets/img/clients/client-7-light.png" class="tt-lv-img-light" loading="lazy" alt="Image">
-											<img src="assets/img/clients/client-7-dark.png" class="tt-lv-img-dark" loading="lazy" alt="Image">
-										</div> <!-- /.tt-lv-item-inner -->
-									</a> <!-- /.tt-logo-wall-item -->
-								</li>
-								<li>
-									<a href="javascript:void(0)" class="tt-logo-wall-item cursor-alter" role="button">
-
-										<div class="tt-lv-item-inner">
-											<img src="assets/img/clients/client-8-light.png" class="tt-lv-img-light" loading="lazy" alt="Image">
-											<img src="assets/img/clients/client-8-dark.png" class="tt-lv-img-dark" loading="lazy" alt="Image">
-										</div> <!-- /.tt-lv-item-inner -->
-									</a> <!-- /.tt-logo-wall-item -->
-								</li>
-								<li>
-									<a href="javascript:void(0)" class="tt-logo-wall-item cursor-alter" role="button">
-
-										<div class="tt-lv-item-inner">
-											<img src="assets/img/clients/client-9-light.png" class="tt-lv-img-light" loading="lazy" alt="Image">
-											<img src="assets/img/clients/client-9-dark.png" class="tt-lv-img-dark" loading="lazy" alt="Image">
-										</div> <!-- /.tt-lv-item-inner -->
-									</a> <!-- /.tt-logo-wall-item -->
-								</li>
-								<li>
-									<a href="javascript:void(0)" class="tt-logo-wall-item cursor-alter" role="button">
-
-										<div class="tt-lv-item-inner">
-											<img src="assets/img/clients/client-10-light.png" class="tt-lv-img-light" loading="lazy" alt="Image">
-											<img src="assets/img/clients/client-10-dark.png" class="tt-lv-img-dark" loading="lazy" alt="Image">
-										</div> <!-- /.tt-lv-item-inner -->
-									</a> <!-- /.tt-logo-wall-item -->
-								</li>
-
-								<!-- Use the below example if you want a list item without link -->
-								<!-- <li>
-									<div class="tt-logo-wall-item">
-										<div class="tt-lv-item-inner">
-											<img src="assets/img/clients/client-10-light.png" class="tt-lv-img-light" loading="lazy"alt="Image">
-											<img src="assets/img/clients/client-10-dark.png" class="tt-lv-img-dark" loading="lazy" alt="Image">
-										</div>
-									</div>
-								</li> -->
-							</ul>
-							<!-- End logo wall -->
-
-						</div> <!-- /.tt-section-inner -->
+					  <div class="tt-section-inner tt-wrap">
+					
+					    <ul class="tt-logo-wall tt-anim-fadeinup">
+					      <li>
+					        <div class="tt-logo-wall-item cursor-alter" aria-hidden="true">
+					          <div class="tt-lv-item-inner">
+					            <img src="assets/img/clients/client-1-light.png" class="tt-lv-img-light" loading="lazy" alt="Image">
+					            <img src="assets/img/clients/client-1-dark.png"  class="tt-lv-img-dark"  loading="lazy" alt="Image">
+					          </div>
+					        </div>
+					      </li>
+					      <li>
+					        <div class="tt-logo-wall-item cursor-alter" aria-hidden="true">
+					          <div class="tt-lv-item-inner">
+					            <img src="assets/img/clients/client-2-light.png" class="tt-lv-img-light" loading="lazy" alt="Image">
+					            <img src="assets/img/clients/client-2-dark.png"  class="tt-lv-img-dark"  loading="lazy" alt="Image">
+					          </div>
+					        </div>
+					      </li>
+					      <li>
+					        <div class="tt-logo-wall-item cursor-alter" aria-hidden="true">
+					          <div class="tt-lv-item-inner">
+					            <img src="assets/img/clients/client-3-light.png" class="tt-lv-img-light" loading="lazy" alt="Image">
+					            <img src="assets/img/clients/client-3-dark.png"  class="tt-lv-img-dark"  loading="lazy" alt="Image">
+					          </div>
+					        </div>
+					      </li>
+					      <li>
+					        <div class="tt-logo-wall-item cursor-alter" aria-hidden="true">
+					          <div class="tt-lv-item-inner">
+					            <img src="assets/img/clients/client-4-light.png" class="tt-lv-img-light" loading="lazy" alt="Image">
+					            <img src="assets/img/clients/client-4-dark.png"  class="tt-lv-img-dark"  loading="lazy" alt="Image">
+					          </div>
+					        </div>
+					      </li>
+					      <!-- Ripeti lo stesso schema per tutti gli altri loghi -->
+					    </ul>
+					
+					  </div>
 					</div>
-					<!-- End tt-section -->
+					
+										<!-- End tt-section -->
 
 
 					<!-- =======================
@@ -1280,6 +1221,7 @@
 
 
 </html>
+
 
 
 
