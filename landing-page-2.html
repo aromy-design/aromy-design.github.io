@@ -44,6 +44,20 @@
 		<!-- Light style CSS -->
 		<link rel="stylesheet" href="assets/css/theme-light.css">
 
+	  <link rel="stylesheet" href="assets/css/theme.css">
+	  <link rel="stylesheet" href="assets/css/theme-light.css">
+	
+	  <!-- Override CSS per logo wall -->
+	  <style>
+		.tt-logo-wall .tt-logo-wall-item { transition: background-color .3s ease-in-out; }
+		.tt-logo-wall .tt-logo-wall-item:hover { background-color: rgb(124 124 124 / 15%); }
+		.tt-logo-wall .tt-logo-wall-item img {
+		  transform: scale(1);
+		  transition: transform .3s ease-in-out, opacity .3s ease-in-out;
+		}
+		.tt-logo-wall .tt-logo-wall-item:hover img { transform: scale(1.1); }
+	  </style>
+		
 	</head>
 
 	
@@ -1207,6 +1221,7 @@
 
 
 </html>
+
 
 
 
