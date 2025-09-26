@@ -1,0 +1,58 @@
+/* page-masonry-2.css */
+/* Palette specifica per la pagina Masonry 2 */
+
+.page-masonry-2{
+  --tt-body-bg: #0f1115;
+  --tt-text-color: #e6e8ec;
+  --tt-heading-color: #ffffff;
+  --tt-accent-color: #7cf3d6;
+  --tt-link-color: var(--tt-accent-color);
+  --tt-link-hover-color: #54d7bb;
+  --tt-border-color: rgba(255,255,255,.12);
+  --tt-btn-secondary-bg: var(--tt-accent-color);
+  --tt-btn-secondary-color: #0f1115;
+}
+
+/* Base background e testo */
+.page-masonry-2{ background-color: var(--tt-body-bg); color: var(--tt-text-color); }
+
+/* Titoli */
+.page-masonry-2 h1, .page-masonry-2 h2, .page-masonry-2 h3,
+.page-masonry-2 .tt-heading-title, .page-masonry-2 .pgi-title{
+  color: var(--tt-heading-color);
+}
+
+/* Link */
+.page-masonry-2 a, .page-masonry-2 .tt-link{ color: var(--tt-link-color); }
+.page-masonry-2 a:hover, .page-masonry-2 .tt-link:hover{ color: var(--tt-link-hover-color); }
+
+/* Header e footer */
+.page-masonry-2 #tt-header.tt-header-filled .tt-header-inner{ background-color: var(--tt-body-bg); }
+.page-masonry-2 .border-top{ border-color: var(--tt-border-color) !important; }
+.page-masonry-2 #tt-footer{ background: var(--tt-body-bg); }
+
+/* Bottoni secondary */
+.page-masonry-2 .tt-btn.tt-btn-secondary{
+  background: var(--tt-btn-secondary-bg);
+  color: var(--tt-btn-secondary-color);
+  border-color: transparent;
+}
+.page-masonry-2 .tt-btn.tt-btn-secondary:hover{ filter: brightness(0.92); }
+
+/* Griglia masonry: caption e categorie */
+.page-masonry-2 .portfolio-grid .pgi-title{ color: var(--tt-heading-color); }
+.page-masonry-2 .portfolio-grid .pgi-categories a{ color: rgba(255,255,255,.75); }
+
+/* Filtri/categorie portfolio */
+.page-masonry-2 .tt-portfolio-categories a.is-active{
+  background: var(--tt-accent-color);
+  color: #0f1115;
+  border-color: var(--tt-accent-color);
+}
+.page-masonry-2 .tt-portfolio-categories a:hover{ color: var(--tt-accent-color); }
+
+/* Dettagli decorativi */
+.page-masonry-2 .tt-header,
+.page-masonry-2 .tt-footer,
+.page-masonry-2 .tt-section.border-top{ border-color: var(--tt-border-color); }
+.page-masonry-2 .tt-stroke{ stroke: var(--tt-accent-color); }
