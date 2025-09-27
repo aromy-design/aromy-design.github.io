@@ -1,58 +1,119 @@
 /* page-masonry-2.css */
-/* Palette specifica per la pagina Masonry 2 */
+/* Stile dedicato per portfolio-masonry-2 (header nero, contenuto blu, testi neri) */
 
+/* =========================
+   Variabili pagina-specifiche
+   ========================= */
 .page-masonry-2{
-  --tt-body-bg: #0f1115;
-  --tt-text-color: #e6e8ec;
-  --tt-heading-color: #ffffff;
-  --tt-accent-color: #7cf3d6;
-  --tt-link-color: var(--tt-accent-color);
-  --tt-link-hover-color: #54d7bb;
-  --tt-border-color: rgba(255,255,255,.12);
-  --tt-btn-secondary-bg: var(--tt-accent-color);
-  --tt-btn-secondary-color: #0f1115;
+  --tt-body-bg: #0000FF;            /* sfondo pagina (blu puro) */
+  --tt-text-color: #000000;         /* testo base (nero) */
+  --tt-heading-color: #000000;      /* titoli (neri) */
+  --tt-accent-color: #000000;       /* accento neutro (nero) */
+  --tt-link-color: #000000;         /* link (neri) */
+  --tt-link-hover-color: #000000;   /* link hover (neri) */
+  --tt-border-color: rgba(0,0,0,.2);
+  --tt-btn-secondary-bg: #000000;   /* bottoni secondary scuri */
+  --tt-btn-secondary-color: #ffffff;/* testo bottoni */
 }
 
-/* Base background e testo */
-.page-masonry-2{ background-color: var(--tt-body-bg); color: var(--tt-text-color); }
+/* =========================
+   Base background e testo (contenuto)
+   ========================= */
+.page-masonry-2{
+  background-color: var(--tt-body-bg);
+  color: var(--tt-text-color);
+}
 
-/* Titoli */
-.page-masonry-2 h1, .page-masonry-2 h2, .page-masonry-2 h3,
-.page-masonry-2 .tt-heading-title, .page-masonry-2 .pgi-title{
+/* =========================
+   Header (solo sfondo nero, testi restano bianchi dal tema)
+   ========================= */
+.page-masonry-2 #tt-header.tt-header-filled .tt-header-inner{
+  background-color: #000000 !important; /* nero puro */
+}
+
+/* =========================
+   Titoli (fuori dall'header)
+   ========================= */
+.page-masonry-2 h1,
+.page-masonry-2 h2,
+.page-masonry-2 h3,
+.page-masonry-2 h4,
+.page-masonry-2 h5,
+.page-masonry-2 h6,
+.page-masonry-2 .tt-heading-title,
+.page-masonry-2 .pgi-title{
   color: var(--tt-heading-color);
 }
 
-/* Link */
-.page-masonry-2 a, .page-masonry-2 .tt-link{ color: var(--tt-link-color); }
-.page-masonry-2 a:hover, .page-masonry-2 .tt-link:hover{ color: var(--tt-link-hover-color); }
+/* =========================
+   Link (limitati a contenuto e footer per NON toccare l'header)
+   ========================= */
+.page-masonry-2 #tt-content-wrap a,
+.page-masonry-2 #tt-footer a,
+.page-masonry-2 #tt-content-wrap .tt-link,
+.page-masonry-2 #tt-footer .tt-link{
+  color: var(--tt-link-color) !important;
+}
+.page-masonry-2 #tt-content-wrap a:hover,
+.page-masonry-2 #tt-footer a:hover,
+.page-masonry-2 #tt-content-wrap .tt-link:hover,
+.page-masonry-2 #tt-footer .tt-link:hover{
+  color: var(--tt-link-hover-color) !important;
+}
 
-/* Header e footer */
-.page-masonry-2 #tt-header.tt-header-filled .tt-header-inner{ background-color: var(--tt-body-bg); }
-.page-masonry-2 .border-top{ border-color: var(--tt-border-color) !important; }
-.page-masonry-2 #tt-footer{ background: var(--tt-body-bg); }
+/* =========================
+   Header e footer: bordi e sfondi
+   ========================= */
+.page-masonry-2 .border-top{
+  border-color: var(--tt-border-color) !important;
+}
+.page-masonry-2 #tt-footer{
+  background: var(--tt-body-bg);
+  color: #000000;
+}
 
-/* Bottoni secondary */
+/* =========================
+   Bottoni secondary
+   ========================= */
 .page-masonry-2 .tt-btn.tt-btn-secondary{
   background: var(--tt-btn-secondary-bg);
   color: var(--tt-btn-secondary-color);
   border-color: transparent;
 }
-.page-masonry-2 .tt-btn.tt-btn-secondary:hover{ filter: brightness(0.92); }
+.page-masonry-2 .tt-btn.tt-btn-secondary:hover{
+  filter: brightness(0.92);
+}
 
-/* Griglia masonry: caption e categorie */
-.page-masonry-2 .portfolio-grid .pgi-title{ color: var(--tt-heading-color); }
-.page-masonry-2 .portfolio-grid .pgi-categories a{ color: rgba(255,255,255,.75); }
+/* =========================
+   Griglia masonry: caption e categorie
+   ========================= */
+.page-masonry-2 .portfolio-grid .pgi-title{
+  color: var(--tt-heading-color);
+}
+.page-masonry-2 .portfolio-grid .pgi-categories a{
+  color: #000000; /* categorie nere */
+}
 
-/* Filtri/categorie portfolio */
+/* =========================
+   Filtri/categorie portfolio
+   ========================= */
 .page-masonry-2 .tt-portfolio-categories a.is-active{
   background: var(--tt-accent-color);
-  color: #0f1115;
+  color: #ffffff;
   border-color: var(--tt-accent-color);
 }
-.page-masonry-2 .tt-portfolio-categories a:hover{ color: var(--tt-accent-color); }
+.page-masonry-2 .tt-portfolio-categories a:hover{
+  color: var(--tt-accent-color);
+}
 
-/* Dettagli decorativi */
+/* =========================
+   Dettagli decorativi
+   ========================= */
 .page-masonry-2 .tt-header,
 .page-masonry-2 .tt-footer,
-.page-masonry-2 .tt-section.border-top{ border-color: var(--tt-border-color); }
-.page-masonry-2 .tt-stroke{ stroke: var(--tt-accent-color); }
+.page-masonry-2 .tt-section.border-top{
+  border-color: var(--tt-border-color);
+}
+.page-masonry-2 .tt-stroke{
+  stroke: var(--tt-accent-color);
+}
