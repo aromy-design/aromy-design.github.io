@@ -83,8 +83,8 @@
   --pm2-hover-reveal-color: #ffffff;
 
   /* PRELOADER / PAGE TRANSITION: colore separato dal body */
-  --pm2-preloader-overlay: #0b0b0b;
-  --pm2-preloader-bg: #0b0b0b;
+  --pm2-preloader-overlay: #161616;
+  --pm2-preloader-bg: #161616;
 
   /* Utility slots */
   --pm2-color-1: #000000;
