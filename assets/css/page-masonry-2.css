@@ -1,45 +1,48 @@
-/* page-masonry-2-extended-v2.css
-   Granular color control for the Masonry 2 page only.
-   Everything scoped under .page-masonry-2 to avoid side effects.
-   ------------------------------------------------------------------ */
+/* page-masonry-2-extended-v3.css
+   Granular color control SOLO per Masonry-2 (scoped con .page-masonry-2)
+   Include: header popup con bordi curvi corretti, colore testi "nascosti" on-hover,
+   preloader con colore separato dal background pagina.
+*/
 
 /* =========================
-   Core palette (edit here)
+   PALETTE E VARIABILI
    ========================= */
 .page-masonry-2{
-  /* Global content */
+  /* Contenuto */
   --pm2-body-bg: #0000FF;
-  --pm2-text: #000000;
-  --pm2-heading: #000000;
-  --pm2-link: #000000;
-  --pm2-link-hover: #111111;
+  --pm2-text: #ffffff;
+  --pm2-heading: #ffffff;
+  --pm2-link: #ffffff;
+  --pm2-link-hover: #ffffff;
   --pm2-border: rgba(0,0,0,.25);
-  --pm2-muted: rgba(0,0,0,.6);
 
-  /* Global accent that many theme parts use (maps to --tt-main-color) */
-  --pm2-accent: #e60000; /* underline/menu dots, FA dot in scroll-to-top, etc. */
+  /* Accento globale (hook al tema) */
+  --pm2-accent: #000000;
 
   /* Header */
-  --pm2-header-bg: #000000;
+  --pm2-header-bg: #00000000;
   --pm2-header-text: #FFFFFF;
   --pm2-header-link: #FFFFFF;
   --pm2-header-link-hover: #FFFFFF;
   --pm2-header-border: rgba(255,255,255,.12);
-  --pm2-submenu-bg: #101010;
-  --pm2-submenu-link: #F0F0F0;
-  --pm2-submenu-link-hover: #FFFFFF;
-  --pm2-menu-underline: #e60000; /* line under menu items */
+
+  /* Submenu popup (Work, ecc.) */
+  --pm2-submenu-bg: #000000;
+  --pm2-submenu-link: #ffffff;
+  --pm2-submenu-link-hover: #ffffff;
+  --pm2-submenu-radius: 14px;
+  --pm2-submenu-shadow: rgba(0,0,0,.35);
 
   /* Footer */
-  --pm2-footer-bg: #0000FF;
-  --pm2-footer-text: #000000;
-  --pm2-footer-link: #000000;
-  --pm2-footer-link-hover: #111111;
-  --pm2-footer-border: rgba(0,0,0,.25);
+  --pm2-footer-bg: #000000;
+  --pm2-footer-text: #FFFFFF;
+  --pm2-footer-link: #FFFFFF;
+  --pm2-footer-link-hover: #FFFFFF;
+  --pm2-footer-border: rgba(255,255,255,.15);
 
-  /* Buttons */
+  /* Bottoni */
   --pm2-btn-primary-bg: #000000;
-  --pm2-btn-primary-text: #FFFFFF;
+  --pm2-btn-primary-text: #ffffff;
   --pm2-btn-primary-border: #000000;
   --pm2-btn-primary-bg-hover: #111111;
   --pm2-btn-primary-text-hover: #FFFFFF;
@@ -50,15 +53,12 @@
   --pm2-btn-secondary-bg-hover: #EDEDED;
   --pm2-btn-secondary-text-hover: #000000;
 
-  /* Portfolio grid specifics */
+  /* Griglia / filtri */
   --pm2-card-bg: transparent;
-  --pm2-card-overlay: rgba(0,0,0,.0);
+  --pm2-card-overlay: rgba(0,0,0,0);
   --pm2-item-title: #000000;
   --pm2-item-meta: #000000;
-  --pm2-chip-bg: #FFFFFF;
-  --pm2-chip-text: #000000;
 
-  /* Filters / categories row */
   --pm2-filter-text: #000000;
   --pm2-filter-border: rgba(0,0,0,.25);
   --pm2-filter-hover: #000000;
@@ -66,20 +66,27 @@
   --pm2-filter-active-text: #FFFFFF;
 
   /* Scroll-to-top */
-  --pm2-scrolltop-stroke: #FFFFFF; /* ring path stroke */
-  --pm2-scrolltop-dot: #e60000;    /* center FA dot */
-  --pm2-scrolltop-ring: rgba(143,143,143,.40); /* outer inset ring */
+  --pm2-scrolltop-stroke: #FFFFFF; /* traccia circolare */
+  --pm2-scrolltop-ring: rgba(143,143,143,.40); /* anello esterno */
+  --pm2-scrolltop-dot: #ffffff; /* pallino centrale */
 
   /* Magic cursor */
-  --pm2-cursor-bg: rgba(255,0,0,0.0);     /* fill */
-  --pm2-cursor-text: #FFFFFF;             /* text/icons inside ball */
-  --pm2-cursor-border: rgba(255,0,0,1);   /* ring color */
-  --pm2-cursor-magnetic: #e60000;         /* ring when magnetic (maps to --tt-ball-magnetic-color) */
-  --pm2-cursor-shadow: rgba(255,0,0,0.35);/* glow */
+  --pm2-cursor-bg: rgba(255,0,0,0.0);
+  --pm2-cursor-text: #FFFFFF;
+  --pm2-cursor-border: rgb(255 255 255);
+  --pm2-cursor-magnetic: #0019ff;
+  --pm2-cursor-shadow: rgb(255 255 255 / 35%);
   --pm2-cursor-size: 26px;
   --pm2-cursor-border-width: 2px;
 
-  /* Quick utility color slots */
+  /* Hover-reveal dei testi nascosti (titoli, link con data-hover) */
+  --pm2-hover-reveal-color: #ffffff;
+
+  /* PRELOADER / PAGE TRANSITION: colore separato dal body */
+  --pm2-preloader-overlay: #0b0b0b;
+  --pm2-preloader-bg: #0b0b0b;
+
+  /* Utility slots */
   --pm2-color-1: #000000;
   --pm2-color-2: #FFFFFF;
   --pm2-color-3: #FF0000;
@@ -87,7 +94,7 @@
   --pm2-color-5: #0000FF;
   --pm2-color-6: #FFD400;
 
-  /* Map to theme variables to hook internal effects */
+  /* MAPPATURA SU VARIABILI DEL TEMA */
   --tt-main-color: var(--pm2-accent);
   --tt-link-color: var(--pm2-link);
   --tt-link-hover-color: var(--pm2-link-hover);
@@ -98,28 +105,20 @@
   --tt-ball-magnetic-color: var(--pm2-cursor-magnetic);
   --tt-ball-bg-color: var(--pm2-cursor-bg);
   --tt-ball-color: var(--pm2-cursor-text);
-  --tt-light-color: var(--pm2-scrolltop-stroke); /* used in some strokes */
+  --tt-light-color: var(--pm2-scrolltop-stroke);
 }
 
 /* =========================
-   Base page background + text
+   BASE
    ========================= */
-.page-masonry-2{
-  background: var(--pm2-body-bg) !important;
-  color: var(--pm2-text) !important;
-}
-.page-masonry-2 h1,.page-masonry-2 h2,.page-masonry-2 h3,
-.page-masonry-2 h4,.page-masonry-2 h5,.page-masonry-2 h6,
-.page-masonry-2 .tt-heading-title,.page-masonry-2 .pgi-title{
-  color: var(--pm2-heading) !important;
-}
-.page-masonry-2 #tt-content-wrap a,
-.page-masonry-2 #tt-content-wrap .tt-link{ color: var(--pm2-link) !important; }
-.page-masonry-2 #tt-content-wrap a:hover,
-.page-masonry-2 #tt-content-wrap .tt-link:hover{ color: var(--pm2-link-hover) !important; }
+.page-masonry-2{ background: var(--pm2-body-bg) !important; color: var(--pm2-text) !important; }
+.page-masonry-2 h1,.page-masonry-2 h2,.page-masonry-2 h3,.page-masonry-2 h4,.page-masonry-2 h5,.page-masonry-2 h6,
+.page-masonry-2 .tt-heading-title,.page-masonry-2 .pgi-title{ color: var(--pm2-heading) !important; }
+.page-masonry-2 #tt-content-wrap a,.page-masonry-2 #tt-content-wrap .tt-link{ color: var(--pm2-link) !important; }
+.page-masonry-2 #tt-content-wrap a:hover,.page-masonry-2 #tt-content-wrap .tt-link:hover{ color: var(--pm2-link-hover) !important; }
 
 /* =========================
-   Header
+   HEADER
    ========================= */
 .page-masonry-2 #tt-header.tt-header-filled .tt-header-inner{
   background: var(--pm2-header-bg) !important;
@@ -128,25 +127,51 @@
 .page-masonry-2 #tt-header,
 .page-masonry-2 #tt-header .tt-logo,
 .page-masonry-2 #tt-header .tt-link,
-.page-masonry-2 #tt-header a{
-  color: var(--pm2-header-text) !important;
-}
+.page-masonry-2 #tt-header a{ color: var(--pm2-header-text) !important; }
 .page-masonry-2 #tt-header a{ color: var(--pm2-header-link) !important; }
 .page-masonry-2 #tt-header a:hover{ color: var(--pm2-header-link-hover) !important; }
 
-/* Menu underline (hover/active) */
+/* Sottolineatura/linea sotto le voci menu */
 .page-masonry-2 .tt-main-menu-list > li > a::before,
 .page-masonry-2 .tt-main-menu-list > li > .tt-submenu-trigger > a::before{
-  background-color: var(--pm2-menu-underline) !important;
+  background-color: var(--pm2-accent) !important;
 }
 
-/* Submenus */
-.page-masonry-2 .tt-main-menu .tt-submenu{ background: var(--pm2-submenu-bg) !important; }
+/* =========================
+   SUBMENU POPUP FIX (bordo curvo, no bleeding)
+   ========================= */
+.page-masonry-2 .tt-main-menu .tt-submenu{
+  background: var(--pm2-submenu-bg) !important;
+  border-radius: var(--pm2-submenu-radius);
+  background-clip: padding-box;
+  overflow: hidden; /* evita colore nelle zone trasparenti degli angoli */
+  box-shadow: 0 10px 24px -8px var(--pm2-submenu-shadow);
+}
+/* Disabilita eventuale freccetta/caret che “sporca” i bordi */
+.page-masonry-2 .tt-main-menu .tt-submenu::before,
+.page-masonry-2 .tt-main-menu .tt-submenu::after{ display: none !important; }
+
 .page-masonry-2 .tt-main-menu .tt-submenu a{ color: var(--pm2-submenu-link) !important; }
 .page-masonry-2 .tt-main-menu .tt-submenu a:hover{ color: var(--pm2-submenu-link-hover) !important; }
 
 /* =========================
-   Footer
+   HOVER-REVEAL TESTI NASCOSTI
+   (span con data-hover, titoli, link, bottoni)
+   ========================= */
+/* Colora il testo “nascosto” generato via ::before {content: attr(data-hover)} */
+.page-masonry-2 [data-hover]::before{
+  color: var(--pm2-hover-reveal-color) !important;
+}
+/* Copri i casi comuni del tema */
+.page-masonry-2 .tt-btn span::before,
+.page-masonry-2 .tt-link span::before,
+.page-masonry-2 .pgi-title a span::before,
+.page-masonry-2 .tt-main-menu a span::before{
+  color: var(--pm2-hover-reveal-color) !important;
+}
+
+/* =========================
+   FOOTER
    ========================= */
 .page-masonry-2 #tt-footer{
   background: var(--pm2-footer-bg) !important;
@@ -156,24 +181,18 @@
 .page-masonry-2 #tt-footer a{ color: var(--pm2-footer-link) !important; }
 .page-masonry-2 #tt-footer a:hover{ color: var(--pm2-footer-link-hover) !important; }
 .page-masonry-2 #tt-footer .tt-footer-widget-heading{ color: var(--pm2-footer-text) !important; }
-.page-masonry-2 #tt-footer .tt-footer-logo img{ filter: none; }
 
 /* =========================
-   Borders common
+   BORDI COMUNI
    ========================= */
 .page-masonry-2 .border-top,
 .page-masonry-2 .border-bottom,
-.page-masonry-2 .tt-section.border-top{
-  border-color: var(--pm2-border) !important;
-}
+.page-masonry-2 .tt-section.border-top{ border-color: var(--pm2-border) !important; }
 
 /* =========================
-   Buttons
+   BOTTONI
    ========================= */
-.page-masonry-2 .tt-btn{
-  border-width: 1px;
-  transition: filter .2s ease,background-color .2s ease,color .2s ease,border-color .2s ease;
-}
+.page-masonry-2 .tt-btn{ border-width: 1px; transition: filter .2s, background-color .2s, color .2s, border-color .2s; }
 /* Primary */
 .page-masonry-2 .tt-btn:not(.tt-btn-secondary){
   background: var(--pm2-btn-primary-bg) !important;
@@ -198,12 +217,13 @@
 }
 
 /* =========================
-   Portfolio Grid
+   PORTFOLIO / FILTRI
    ========================= */
-.page-masonry-2 .portfolio-grid .tt-grid-item{ background: var(--pm2-card-bg); }
+.page-masonry-2 .portfolio-grid .tt-grid-item{ background: var(--pm2-card-bg) !important; }
 .page-masonry-2 .portfolio-grid .pgi-title{ color: var(--pm2-item-title) !important; }
 .page-masonry-2 .portfolio-grid .pgi-categories a{ color: var(--pm2-item-meta) !important; }
 .page-masonry-2 .pgi-image-holder:before{ background: var(--pm2-card-overlay) !important; }
+
 .page-masonry-2 .tt-portfolio-categories a{
   color: var(--pm2-filter-text) !important;
   border-color: var(--pm2-filter-border) !important;
@@ -215,38 +235,27 @@
   border-color: var(--pm2-filter-active-bg) !important;
 }
 
-/* Chips / tag pills */
-.page-masonry-2 .tt-badge,
-.page-masonry-2 .tt-chip,
-.page-masonry-2 .tt-tag{
-  background: var(--pm2-chip-bg) !important;
-  color: var(--pm2-chip-text) !important;
-  border-color: var(--pm2-chip-bg) !important;
-}
-
 /* =========================
-   Scroll to top
+   SCROLL-TO-TOP
    ========================= */
-.page-masonry-2 .tt-stt-progress{
-  box-shadow: inset 0 0 0 2px var(--pm2-scrolltop-ring) !important;
-}
-.page-masonry-2 .tt-stt-progress .tt-stt-progress-circle path{
-  stroke: var(--pm2-scrolltop-stroke) !important;
-}
-.page-masonry-2 .tt-stt-progress::after{
-  color: var(--pm2-scrolltop-dot) !important;
-}
+.page-masonry-2 .tt-stt-progress{ box-shadow: inset 0 0 0 2px var(--pm2-scrolltop-ring) !important; }
+.page-masonry-2 .tt-stt-progress .tt-stt-progress-circle path{ stroke: var(--pm2-scrolltop-stroke) !important; }
+.page-masonry-2 .tt-stt-progress::after{ color: var(--pm2-scrolltop-dot) !important; }
 
 /* =========================
-   Page transition overlays
+   PAGE TRANSITION / PRELOADER
+   (colore separato dal body)
    ========================= */
 .page-masonry-2 #tt-page-transition .tt-ptr-overlay-top,
 .page-masonry-2 #tt-page-transition .tt-ptr-overlay-bottom{
-  background: var(--pm2-body-bg) !important;
+  background: var(--pm2-preloader-overlay) !important;
+}
+.page-masonry-2 #tt-page-transition .tt-ptr-preloader{
+  background: var(--pm2-preloader-bg) !important;
 }
 
 /* =========================
-   Magic cursor
+   MAGIC CURSOR
    ========================= */
 .page-masonry-2 #magic-cursor #ball{
   width: var(--pm2-cursor-size) !important;
@@ -259,15 +268,8 @@
 }
 
 /* =========================
-   Selection color
+   UTILITY COLORI A BLOCCHI
    ========================= */
-.page-masonry-2 ::selection{ background: var(--pm2-selection-bg); color: var(--pm2-selection-text); }
-.page-masonry-2 ::-moz-selection{ background: var(--pm2-selection-bg); color: var(--pm2-selection-text); }
-
-/* ===========================
-   Utility classes per blocchi
-   =========================== */
-/* Text color utilities */
 .page-masonry-2 .pm2-text-1{ color: var(--pm2-color-1) !important; }
 .page-masonry-2 .pm2-text-2{ color: var(--pm2-color-2) !important; }
 .page-masonry-2 .pm2-text-3{ color: var(--pm2-color-3) !important; }
@@ -275,7 +277,6 @@
 .page-masonry-2 .pm2-text-5{ color: var(--pm2-color-5) !important; }
 .page-masonry-2 .pm2-text-6{ color: var(--pm2-color-6) !important; }
 
-/* Background utilities */
 .page-masonry-2 .pm2-bg-1{ background: var(--pm2-color-1) !important; color: var(--pm2-color-2) !important; }
 .page-masonry-2 .pm2-bg-2{ background: var(--pm2-color-2) !important; color: var(--pm2-color-1) !important; }
 .page-masonry-2 .pm2-bg-3{ background: var(--pm2-color-3) !important; color: var(--pm2-color-2) !important; }
@@ -283,40 +284,9 @@
 .page-masonry-2 .pm2-bg-5{ background: var(--pm2-color-5) !important; color: var(--pm2-color-2) !important; }
 .page-masonry-2 .pm2-bg-6{ background: var(--pm2-color-6) !important; color: var(--pm2-color-1) !important; }
 
-/* Border utilities */
 .page-masonry-2 .pm2-border-1{ border-color: var(--pm2-color-1) !important; }
 .page-masonry-2 .pm2-border-2{ border-color: var(--pm2-color-2) !important; }
 .page-masonry-2 .pm2-border-3{ border-color: var(--pm2-color-3) !important; }
 .page-masonry-2 .pm2-border-4{ border-color: var(--pm2-color-4) !important; }
 .page-masonry-2 .pm2-border-5{ border-color: var(--pm2-color-5) !important; }
 .page-masonry-2 .pm2-border-6{ border-color: var(--pm2-color-6) !important; }
-
-/* Button style utilities */
-.page-masonry-2 .pm2-btn-1{
-  background: var(--pm2-color-1) !important;
-  color: var(--pm2-color-2) !important;
-  border-color: var(--pm2-color-1) !important;
-}
-.page-masonry-2 .pm2-btn-2{
-  background: var(--pm2-color-2) !important;
-  color: var(--pm2-color-1) !important;
-  border-color: var(--pm2-color-2) !important;
-}
-.page-masonry-2 .pm2-btn-outline-1{
-  background: transparent !important;
-  color: var(--pm2-color-1) !important;
-  border-color: var(--pm2-color-1) !important;
-}
-.page-masonry-2 .pm2-btn-outline-2{
-  background: transparent !important;
-  color: var(--pm2-color-2) !important;
-  border-color: var(--pm2-color-2) !important;
-}
-
-/* Link utilities */
-.page-masonry-2 .pm2-link-1{ color: var(--pm2-color-1) !important; }
-.page-masonry-2 .pm2-link-2{ color: var(--pm2-color-2) !important; }
-.page-masonry-2 .pm2-link-3{ color: var(--pm2-color-3) !important; }
-.page-masonry-2 .pm2-link-4{ color: var(--pm2-color-4) !important; }
-.page-masonry-2 .pm2-link-5{ color: var(--pm2-color-5) !important; }
-.page-masonry-2 .pm2-link-6{ color: var(--pm2-color-6) !important; }
