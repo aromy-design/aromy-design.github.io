@@ -1,11 +1,11 @@
-/* page-masonry-2-extended.css
+/* page-masonry-2-extended-v2.css
    Granular color control for the Masonry 2 page only.
-   Scope: everything is under .page-masonry-2 to avoid side effects.
+   Everything scoped under .page-masonry-2 to avoid side effects.
    ------------------------------------------------------------------ */
 
-/* ===============
-   Core palette
-   =============== */
+/* =========================
+   Core palette (edit here)
+   ========================= */
 .page-masonry-2{
   /* Global content */
   --pm2-body-bg: #0000FF;
@@ -16,6 +16,9 @@
   --pm2-border: rgba(0,0,0,.25);
   --pm2-muted: rgba(0,0,0,.6);
 
+  /* Global accent that many theme parts use (maps to --tt-main-color) */
+  --pm2-accent: #e60000; /* underline/menu dots, FA dot in scroll-to-top, etc. */
+
   /* Header */
   --pm2-header-bg: #000000;
   --pm2-header-text: #FFFFFF;
@@ -25,11 +28,13 @@
   --pm2-submenu-bg: #101010;
   --pm2-submenu-link: #F0F0F0;
   --pm2-submenu-link-hover: #FFFFFF;
+  --pm2-menu-underline: #e60000; /* line under menu items */
 
   /* Footer */
   --pm2-footer-bg: #0000FF;
   --pm2-footer-text: #000000;
   --pm2-footer-link: #000000;
+  --pm2-footer-link-hover: #111111;
   --pm2-footer-border: rgba(0,0,0,.25);
 
   /* Buttons */
@@ -38,6 +43,7 @@
   --pm2-btn-primary-border: #000000;
   --pm2-btn-primary-bg-hover: #111111;
   --pm2-btn-primary-text-hover: #FFFFFF;
+
   --pm2-btn-secondary-bg: #FFFFFF;
   --pm2-btn-secondary-text: #000000;
   --pm2-btn-secondary-border: #FFFFFF;
@@ -59,14 +65,16 @@
   --pm2-filter-active-bg: #000000;
   --pm2-filter-active-text: #FFFFFF;
 
-  /* Misc UI */
-  --pm2-scrolltop-stroke: #000000;
-  --pm2-selection-bg: #000000;
-  --pm2-selection-text: #FFFFFF;
+  /* Scroll-to-top */
+  --pm2-scrolltop-stroke: #FFFFFF; /* ring path stroke */
+  --pm2-scrolltop-dot: #e60000;    /* center FA dot */
+  --pm2-scrolltop-ring: rgba(143,143,143,.40); /* outer inset ring */
 
   /* Magic cursor */
   --pm2-cursor-bg: rgba(255,0,0,0.0);     /* fill */
+  --pm2-cursor-text: #FFFFFF;             /* text/icons inside ball */
   --pm2-cursor-border: rgba(255,0,0,1);   /* ring color */
+  --pm2-cursor-magnetic: #e60000;         /* ring when magnetic (maps to --tt-ball-magnetic-color) */
   --pm2-cursor-shadow: rgba(255,0,0,0.35);/* glow */
   --pm2-cursor-size: 26px;
   --pm2-cursor-border-width: 2px;
@@ -78,9 +86,24 @@
   --pm2-color-4: #00FF00;
   --pm2-color-5: #0000FF;
   --pm2-color-6: #FFD400;
+
+  /* Map to theme variables to hook internal effects */
+  --tt-main-color: var(--pm2-accent);
+  --tt-link-color: var(--pm2-link);
+  --tt-link-hover-color: var(--pm2-link-hover);
+  --tt-sub-menu-bg-color: var(--pm2-submenu-bg);
+  --tt-sub-menu-link-color: var(--pm2-submenu-link);
+  --tt-sub-menu-link-hover-color: var(--pm2-submenu-link-hover);
+  --tt-ball-border-color: var(--pm2-cursor-border);
+  --tt-ball-magnetic-color: var(--pm2-cursor-magnetic);
+  --tt-ball-bg-color: var(--pm2-cursor-bg);
+  --tt-ball-color: var(--pm2-cursor-text);
+  --tt-light-color: var(--pm2-scrolltop-stroke); /* used in some strokes */
 }
 
-/* Base page background + text */
+/* =========================
+   Base page background + text
+   ========================= */
 .page-masonry-2{
   background: var(--pm2-body-bg) !important;
   color: var(--pm2-text) !important;
@@ -95,7 +118,9 @@
 .page-masonry-2 #tt-content-wrap a:hover,
 .page-masonry-2 #tt-content-wrap .tt-link:hover{ color: var(--pm2-link-hover) !important; }
 
-/* Header */
+/* =========================
+   Header
+   ========================= */
 .page-masonry-2 #tt-header.tt-header-filled .tt-header-inner{
   background: var(--pm2-header-bg) !important;
   border-color: var(--pm2-header-border) !important;
@@ -109,29 +134,42 @@
 .page-masonry-2 #tt-header a{ color: var(--pm2-header-link) !important; }
 .page-masonry-2 #tt-header a:hover{ color: var(--pm2-header-link-hover) !important; }
 
-/* Submenus (desktop + mobile) */
+/* Menu underline (hover/active) */
+.page-masonry-2 .tt-main-menu-list > li > a::before,
+.page-masonry-2 .tt-main-menu-list > li > .tt-submenu-trigger > a::before{
+  background-color: var(--pm2-menu-underline) !important;
+}
+
+/* Submenus */
 .page-masonry-2 .tt-main-menu .tt-submenu{ background: var(--pm2-submenu-bg) !important; }
 .page-masonry-2 .tt-main-menu .tt-submenu a{ color: var(--pm2-submenu-link) !important; }
 .page-masonry-2 .tt-main-menu .tt-submenu a:hover{ color: var(--pm2-submenu-link-hover) !important; }
 
-/* Footer */
+/* =========================
+   Footer
+   ========================= */
 .page-masonry-2 #tt-footer{
   background: var(--pm2-footer-bg) !important;
   color: var(--pm2-footer-text) !important;
   border-top: 1px solid var(--pm2-footer-border) !important;
 }
 .page-masonry-2 #tt-footer a{ color: var(--pm2-footer-link) !important; }
+.page-masonry-2 #tt-footer a:hover{ color: var(--pm2-footer-link-hover) !important; }
 .page-masonry-2 #tt-footer .tt-footer-widget-heading{ color: var(--pm2-footer-text) !important; }
-.page-masonry-2 #tt-footer .tt-footer-logo img{ filter: none; } /* keep brand as-is */
+.page-masonry-2 #tt-footer .tt-footer-logo img{ filter: none; }
 
-/* Borders commonly used */
+/* =========================
+   Borders common
+   ========================= */
 .page-masonry-2 .border-top,
 .page-masonry-2 .border-bottom,
 .page-masonry-2 .tt-section.border-top{
   border-color: var(--pm2-border) !important;
 }
 
-/* Buttons */
+/* =========================
+   Buttons
+   ========================= */
 .page-masonry-2 .tt-btn{
   border-width: 1px;
   transition: filter .2s ease,background-color .2s ease,color .2s ease,border-color .2s ease;
@@ -159,11 +197,13 @@
   border-color: var(--pm2-btn-secondary-bg-hover) !important;
 }
 
-/* Portfolio Grid */
+/* =========================
+   Portfolio Grid
+   ========================= */
 .page-masonry-2 .portfolio-grid .tt-grid-item{ background: var(--pm2-card-bg); }
 .page-masonry-2 .portfolio-grid .pgi-title{ color: var(--pm2-item-title) !important; }
 .page-masonry-2 .portfolio-grid .pgi-categories a{ color: var(--pm2-item-meta) !important; }
-.page-masonry-2 .pgi-image-holder:before{ background: var(--pm2-card-overlay) !important; } /* if theme uses overlay */
+.page-masonry-2 .pgi-image-holder:before{ background: var(--pm2-card-overlay) !important; }
 .page-masonry-2 .tt-portfolio-categories a{
   color: var(--pm2-filter-text) !important;
   border-color: var(--pm2-filter-border) !important;
@@ -175,7 +215,7 @@
   border-color: var(--pm2-filter-active-bg) !important;
 }
 
-/* Chips / tag pills (if present) */
+/* Chips / tag pills */
 .page-masonry-2 .tt-badge,
 .page-masonry-2 .tt-chip,
 .page-masonry-2 .tt-tag{
@@ -184,28 +224,43 @@
   border-color: var(--pm2-chip-bg) !important;
 }
 
-/* Scroll to top circle */
+/* =========================
+   Scroll to top
+   ========================= */
+.page-masonry-2 .tt-stt-progress{
+  box-shadow: inset 0 0 0 2px var(--pm2-scrolltop-ring) !important;
+}
 .page-masonry-2 .tt-stt-progress .tt-stt-progress-circle path{
   stroke: var(--pm2-scrolltop-stroke) !important;
 }
+.page-masonry-2 .tt-stt-progress::after{
+  color: var(--pm2-scrolltop-dot) !important;
+}
 
-/* Page transition overlays */
+/* =========================
+   Page transition overlays
+   ========================= */
 .page-masonry-2 #tt-page-transition .tt-ptr-overlay-top,
 .page-masonry-2 #tt-page-transition .tt-ptr-overlay-bottom{
   background: var(--pm2-body-bg) !important;
 }
 
-/* Magic cursor control */
+/* =========================
+   Magic cursor
+   ========================= */
 .page-masonry-2 #magic-cursor #ball{
   width: var(--pm2-cursor-size) !important;
   height: var(--pm2-cursor-size) !important;
   background: var(--pm2-cursor-bg) !important;
   border: var(--pm2-cursor-border-width) solid var(--pm2-cursor-border) !important;
   box-shadow: 0 0 18px 0 var(--pm2-cursor-shadow) !important;
+  color: var(--pm2-cursor-text) !important;
   mix-blend-mode: normal !important;
 }
 
-/* Selection color */
+/* =========================
+   Selection color
+   ========================= */
 .page-masonry-2 ::selection{ background: var(--pm2-selection-bg); color: var(--pm2-selection-text); }
 .page-masonry-2 ::-moz-selection{ background: var(--pm2-selection-bg); color: var(--pm2-selection-text); }
 
@@ -265,6 +320,3 @@
 .page-masonry-2 .pm2-link-4{ color: var(--pm2-color-4) !important; }
 .page-masonry-2 .pm2-link-5{ color: var(--pm2-color-5) !important; }
 .page-masonry-2 .pm2-link-6{ color: var(--pm2-color-6) !important; }
-
-/* Example targeting of specific blocks without HTML edits (if needed) */
-.page-masonry-2 .tt-footer .tt-footer-widget-heading.pm2-force{ color: var(--pm2-color-6) !important; }
