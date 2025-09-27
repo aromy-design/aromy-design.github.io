@@ -1,119 +1,270 @@
-/* page-masonry-2.css */
-/* Stile dedicato per portfolio-masonry-2 (header nero, contenuto blu, testi neri) */
+/* page-masonry-2-extended.css
+   Granular color control for the Masonry 2 page only.
+   Scope: everything is under .page-masonry-2 to avoid side effects.
+   ------------------------------------------------------------------ */
 
-/* =========================
-   Variabili pagina-specifiche
-   ========================= */
+/* ===============
+   Core palette
+   =============== */
 .page-masonry-2{
-  --tt-body-bg: #0000FF;            /* sfondo pagina (blu puro) */
-  --tt-text-color: #000000;         /* testo base (nero) */
-  --tt-heading-color: #000000;      /* titoli (neri) */
-  --tt-accent-color: #000000;       /* accento neutro (nero) */
-  --tt-link-color: #000000;         /* link (neri) */
-  --tt-link-hover-color: #000000;   /* link hover (neri) */
-  --tt-border-color: rgba(0,0,0,.2);
-  --tt-btn-secondary-bg: #000000;   /* bottoni secondary scuri */
-  --tt-btn-secondary-color: #ffffff;/* testo bottoni */
+  /* Global content */
+  --pm2-body-bg: #0000FF;
+  --pm2-text: #000000;
+  --pm2-heading: #000000;
+  --pm2-link: #000000;
+  --pm2-link-hover: #111111;
+  --pm2-border: rgba(0,0,0,.25);
+  --pm2-muted: rgba(0,0,0,.6);
+
+  /* Header */
+  --pm2-header-bg: #000000;
+  --pm2-header-text: #FFFFFF;
+  --pm2-header-link: #FFFFFF;
+  --pm2-header-link-hover: #FFFFFF;
+  --pm2-header-border: rgba(255,255,255,.12);
+  --pm2-submenu-bg: #101010;
+  --pm2-submenu-link: #F0F0F0;
+  --pm2-submenu-link-hover: #FFFFFF;
+
+  /* Footer */
+  --pm2-footer-bg: #0000FF;
+  --pm2-footer-text: #000000;
+  --pm2-footer-link: #000000;
+  --pm2-footer-border: rgba(0,0,0,.25);
+
+  /* Buttons */
+  --pm2-btn-primary-bg: #000000;
+  --pm2-btn-primary-text: #FFFFFF;
+  --pm2-btn-primary-border: #000000;
+  --pm2-btn-primary-bg-hover: #111111;
+  --pm2-btn-primary-text-hover: #FFFFFF;
+  --pm2-btn-secondary-bg: #FFFFFF;
+  --pm2-btn-secondary-text: #000000;
+  --pm2-btn-secondary-border: #FFFFFF;
+  --pm2-btn-secondary-bg-hover: #EDEDED;
+  --pm2-btn-secondary-text-hover: #000000;
+
+  /* Portfolio grid specifics */
+  --pm2-card-bg: transparent;
+  --pm2-card-overlay: rgba(0,0,0,.0);
+  --pm2-item-title: #000000;
+  --pm2-item-meta: #000000;
+  --pm2-chip-bg: #FFFFFF;
+  --pm2-chip-text: #000000;
+
+  /* Filters / categories row */
+  --pm2-filter-text: #000000;
+  --pm2-filter-border: rgba(0,0,0,.25);
+  --pm2-filter-hover: #000000;
+  --pm2-filter-active-bg: #000000;
+  --pm2-filter-active-text: #FFFFFF;
+
+  /* Misc UI */
+  --pm2-scrolltop-stroke: #000000;
+  --pm2-selection-bg: #000000;
+  --pm2-selection-text: #FFFFFF;
+
+  /* Magic cursor */
+  --pm2-cursor-bg: rgba(255,0,0,0.0);     /* fill */
+  --pm2-cursor-border: rgba(255,0,0,1);   /* ring color */
+  --pm2-cursor-shadow: rgba(255,0,0,0.35);/* glow */
+  --pm2-cursor-size: 26px;
+  --pm2-cursor-border-width: 2px;
+
+  /* Quick utility color slots */
+  --pm2-color-1: #000000;
+  --pm2-color-2: #FFFFFF;
+  --pm2-color-3: #FF0000;
+  --pm2-color-4: #00FF00;
+  --pm2-color-5: #0000FF;
+  --pm2-color-6: #FFD400;
 }
 
-/* =========================
-   Base background e testo (contenuto)
-   ========================= */
+/* Base page background + text */
 .page-masonry-2{
-  background-color: var(--tt-body-bg);
-  color: var(--tt-text-color);
+  background: var(--pm2-body-bg) !important;
+  color: var(--pm2-text) !important;
 }
-
-/* =========================
-   Header (solo sfondo nero, testi restano bianchi dal tema)
-   ========================= */
-.page-masonry-2 #tt-header.tt-header-filled .tt-header-inner{
-  background-color: #000000 !important; /* nero puro */
+.page-masonry-2 h1,.page-masonry-2 h2,.page-masonry-2 h3,
+.page-masonry-2 h4,.page-masonry-2 h5,.page-masonry-2 h6,
+.page-masonry-2 .tt-heading-title,.page-masonry-2 .pgi-title{
+  color: var(--pm2-heading) !important;
 }
-
-/* =========================
-   Titoli (fuori dall'header)
-   ========================= */
-.page-masonry-2 h1,
-.page-masonry-2 h2,
-.page-masonry-2 h3,
-.page-masonry-2 h4,
-.page-masonry-2 h5,
-.page-masonry-2 h6,
-.page-masonry-2 .tt-heading-title,
-.page-masonry-2 .pgi-title{
-  color: var(--tt-heading-color);
-}
-
-/* =========================
-   Link (limitati a contenuto e footer per NON toccare l'header)
-   ========================= */
 .page-masonry-2 #tt-content-wrap a,
-.page-masonry-2 #tt-footer a,
-.page-masonry-2 #tt-content-wrap .tt-link,
-.page-masonry-2 #tt-footer .tt-link{
-  color: var(--tt-link-color) !important;
-}
+.page-masonry-2 #tt-content-wrap .tt-link{ color: var(--pm2-link) !important; }
 .page-masonry-2 #tt-content-wrap a:hover,
-.page-masonry-2 #tt-footer a:hover,
-.page-masonry-2 #tt-content-wrap .tt-link:hover,
-.page-masonry-2 #tt-footer .tt-link:hover{
-  color: var(--tt-link-hover-color) !important;
-}
+.page-masonry-2 #tt-content-wrap .tt-link:hover{ color: var(--pm2-link-hover) !important; }
 
-/* =========================
-   Header e footer: bordi e sfondi
-   ========================= */
-.page-masonry-2 .border-top{
-  border-color: var(--tt-border-color) !important;
+/* Header */
+.page-masonry-2 #tt-header.tt-header-filled .tt-header-inner{
+  background: var(--pm2-header-bg) !important;
+  border-color: var(--pm2-header-border) !important;
 }
+.page-masonry-2 #tt-header,
+.page-masonry-2 #tt-header .tt-logo,
+.page-masonry-2 #tt-header .tt-link,
+.page-masonry-2 #tt-header a{
+  color: var(--pm2-header-text) !important;
+}
+.page-masonry-2 #tt-header a{ color: var(--pm2-header-link) !important; }
+.page-masonry-2 #tt-header a:hover{ color: var(--pm2-header-link-hover) !important; }
+
+/* Submenus (desktop + mobile) */
+.page-masonry-2 .tt-main-menu .tt-submenu{ background: var(--pm2-submenu-bg) !important; }
+.page-masonry-2 .tt-main-menu .tt-submenu a{ color: var(--pm2-submenu-link) !important; }
+.page-masonry-2 .tt-main-menu .tt-submenu a:hover{ color: var(--pm2-submenu-link-hover) !important; }
+
+/* Footer */
 .page-masonry-2 #tt-footer{
-  background: var(--tt-body-bg);
-  color: #000000;
+  background: var(--pm2-footer-bg) !important;
+  color: var(--pm2-footer-text) !important;
+  border-top: 1px solid var(--pm2-footer-border) !important;
+}
+.page-masonry-2 #tt-footer a{ color: var(--pm2-footer-link) !important; }
+.page-masonry-2 #tt-footer .tt-footer-widget-heading{ color: var(--pm2-footer-text) !important; }
+.page-masonry-2 #tt-footer .tt-footer-logo img{ filter: none; } /* keep brand as-is */
+
+/* Borders commonly used */
+.page-masonry-2 .border-top,
+.page-masonry-2 .border-bottom,
+.page-masonry-2 .tt-section.border-top{
+  border-color: var(--pm2-border) !important;
 }
 
-/* =========================
-   Bottoni secondary
-   ========================= */
+/* Buttons */
+.page-masonry-2 .tt-btn{
+  border-width: 1px;
+  transition: filter .2s ease,background-color .2s ease,color .2s ease,border-color .2s ease;
+}
+/* Primary */
+.page-masonry-2 .tt-btn:not(.tt-btn-secondary){
+  background: var(--pm2-btn-primary-bg) !important;
+  color: var(--pm2-btn-primary-text) !important;
+  border-color: var(--pm2-btn-primary-border) !important;
+}
+.page-masonry-2 .tt-btn:not(.tt-btn-secondary):hover{
+  background: var(--pm2-btn-primary-bg-hover) !important;
+  color: var(--pm2-btn-primary-text-hover) !important;
+  border-color: var(--pm2-btn-primary-bg-hover) !important;
+}
+/* Secondary */
 .page-masonry-2 .tt-btn.tt-btn-secondary{
-  background: var(--tt-btn-secondary-bg);
-  color: var(--tt-btn-secondary-color);
-  border-color: transparent;
+  background: var(--pm2-btn-secondary-bg) !important;
+  color: var(--pm2-btn-secondary-text) !important;
+  border-color: var(--pm2-btn-secondary-border) !important;
 }
 .page-masonry-2 .tt-btn.tt-btn-secondary:hover{
-  filter: brightness(0.92);
+  background: var(--pm2-btn-secondary-bg-hover) !important;
+  color: var(--pm2-btn-secondary-text-hover) !important;
+  border-color: var(--pm2-btn-secondary-bg-hover) !important;
 }
 
-/* =========================
-   Griglia masonry: caption e categorie
-   ========================= */
-.page-masonry-2 .portfolio-grid .pgi-title{
-  color: var(--tt-heading-color);
+/* Portfolio Grid */
+.page-masonry-2 .portfolio-grid .tt-grid-item{ background: var(--pm2-card-bg); }
+.page-masonry-2 .portfolio-grid .pgi-title{ color: var(--pm2-item-title) !important; }
+.page-masonry-2 .portfolio-grid .pgi-categories a{ color: var(--pm2-item-meta) !important; }
+.page-masonry-2 .pgi-image-holder:before{ background: var(--pm2-card-overlay) !important; } /* if theme uses overlay */
+.page-masonry-2 .tt-portfolio-categories a{
+  color: var(--pm2-filter-text) !important;
+  border-color: var(--pm2-filter-border) !important;
 }
-.page-masonry-2 .portfolio-grid .pgi-categories a{
-  color: #000000; /* categorie nere */
-}
-
-/* =========================
-   Filtri/categorie portfolio
-   ========================= */
+.page-masonry-2 .tt-portfolio-categories a:hover{ color: var(--pm2-filter-hover) !important; }
 .page-masonry-2 .tt-portfolio-categories a.is-active{
-  background: var(--tt-accent-color);
-  color: #ffffff;
-  border-color: var(--tt-accent-color);
-}
-.page-masonry-2 .tt-portfolio-categories a:hover{
-  color: var(--tt-accent-color);
+  background: var(--pm2-filter-active-bg) !important;
+  color: var(--pm2-filter-active-text) !important;
+  border-color: var(--pm2-filter-active-bg) !important;
 }
 
-/* =========================
-   Dettagli decorativi
-   ========================= */
-.page-masonry-2 .tt-header,
-.page-masonry-2 .tt-footer,
-.page-masonry-2 .tt-section.border-top{
-  border-color: var(--tt-border-color);
+/* Chips / tag pills (if present) */
+.page-masonry-2 .tt-badge,
+.page-masonry-2 .tt-chip,
+.page-masonry-2 .tt-tag{
+  background: var(--pm2-chip-bg) !important;
+  color: var(--pm2-chip-text) !important;
+  border-color: var(--pm2-chip-bg) !important;
 }
-.page-masonry-2 .tt-stroke{
-  stroke: var(--tt-accent-color);
+
+/* Scroll to top circle */
+.page-masonry-2 .tt-stt-progress .tt-stt-progress-circle path{
+  stroke: var(--pm2-scrolltop-stroke) !important;
 }
+
+/* Page transition overlays */
+.page-masonry-2 #tt-page-transition .tt-ptr-overlay-top,
+.page-masonry-2 #tt-page-transition .tt-ptr-overlay-bottom{
+  background: var(--pm2-body-bg) !important;
+}
+
+/* Magic cursor control */
+.page-masonry-2 #magic-cursor #ball{
+  width: var(--pm2-cursor-size) !important;
+  height: var(--pm2-cursor-size) !important;
+  background: var(--pm2-cursor-bg) !important;
+  border: var(--pm2-cursor-border-width) solid var(--pm2-cursor-border) !important;
+  box-shadow: 0 0 18px 0 var(--pm2-cursor-shadow) !important;
+  mix-blend-mode: normal !important;
+}
+
+/* Selection color */
+.page-masonry-2 ::selection{ background: var(--pm2-selection-bg); color: var(--pm2-selection-text); }
+.page-masonry-2 ::-moz-selection{ background: var(--pm2-selection-bg); color: var(--pm2-selection-text); }
+
+/* ===========================
+   Utility classes per blocchi
+   =========================== */
+/* Text color utilities */
+.page-masonry-2 .pm2-text-1{ color: var(--pm2-color-1) !important; }
+.page-masonry-2 .pm2-text-2{ color: var(--pm2-color-2) !important; }
+.page-masonry-2 .pm2-text-3{ color: var(--pm2-color-3) !important; }
+.page-masonry-2 .pm2-text-4{ color: var(--pm2-color-4) !important; }
+.page-masonry-2 .pm2-text-5{ color: var(--pm2-color-5) !important; }
+.page-masonry-2 .pm2-text-6{ color: var(--pm2-color-6) !important; }
+
+/* Background utilities */
+.page-masonry-2 .pm2-bg-1{ background: var(--pm2-color-1) !important; color: var(--pm2-color-2) !important; }
+.page-masonry-2 .pm2-bg-2{ background: var(--pm2-color-2) !important; color: var(--pm2-color-1) !important; }
+.page-masonry-2 .pm2-bg-3{ background: var(--pm2-color-3) !important; color: var(--pm2-color-2) !important; }
+.page-masonry-2 .pm2-bg-4{ background: var(--pm2-color-4) !important; color: var(--pm2-color-1) !important; }
+.page-masonry-2 .pm2-bg-5{ background: var(--pm2-color-5) !important; color: var(--pm2-color-2) !important; }
+.page-masonry-2 .pm2-bg-6{ background: var(--pm2-color-6) !important; color: var(--pm2-color-1) !important; }
+
+/* Border utilities */
+.page-masonry-2 .pm2-border-1{ border-color: var(--pm2-color-1) !important; }
+.page-masonry-2 .pm2-border-2{ border-color: var(--pm2-color-2) !important; }
+.page-masonry-2 .pm2-border-3{ border-color: var(--pm2-color-3) !important; }
+.page-masonry-2 .pm2-border-4{ border-color: var(--pm2-color-4) !important; }
+.page-masonry-2 .pm2-border-5{ border-color: var(--pm2-color-5) !important; }
+.page-masonry-2 .pm2-border-6{ border-color: var(--pm2-color-6) !important; }
+
+/* Button style utilities */
+.page-masonry-2 .pm2-btn-1{
+  background: var(--pm2-color-1) !important;
+  color: var(--pm2-color-2) !important;
+  border-color: var(--pm2-color-1) !important;
+}
+.page-masonry-2 .pm2-btn-2{
+  background: var(--pm2-color-2) !important;
+  color: var(--pm2-color-1) !important;
+  border-color: var(--pm2-color-2) !important;
+}
+.page-masonry-2 .pm2-btn-outline-1{
+  background: transparent !important;
+  color: var(--pm2-color-1) !important;
+  border-color: var(--pm2-color-1) !important;
+}
+.page-masonry-2 .pm2-btn-outline-2{
+  background: transparent !important;
+  color: var(--pm2-color-2) !important;
+  border-color: var(--pm2-color-2) !important;
+}
+
+/* Link utilities */
+.page-masonry-2 .pm2-link-1{ color: var(--pm2-color-1) !important; }
+.page-masonry-2 .pm2-link-2{ color: var(--pm2-color-2) !important; }
+.page-masonry-2 .pm2-link-3{ color: var(--pm2-color-3) !important; }
+.page-masonry-2 .pm2-link-4{ color: var(--pm2-color-4) !important; }
+.page-masonry-2 .pm2-link-5{ color: var(--pm2-color-5) !important; }
+.page-masonry-2 .pm2-link-6{ color: var(--pm2-color-6) !important; }
+
+/* Example targeting of specific blocks without HTML edits (if needed) */
+.page-masonry-2 .tt-footer .tt-footer-widget-heading.pm2-force{ color: var(--pm2-color-6) !important; }
