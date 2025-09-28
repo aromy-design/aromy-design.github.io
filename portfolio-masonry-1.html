@@ -1,4 +1,4 @@
-ent<!DOCTYPE html>
+<!DOCTYPE html>
 
 <!--
 	Template:   Jesper - Creative Portfolio Showcase HTML Website Template
@@ -10,7 +10,7 @@ ent<!DOCTYPE html>
 	<head>
 
 		<!-- Title -->
-		<title>Works | Emanuele Cerni - Creative Portfolio</title>
+		<title>Events | Emanuele Cerni - Creative Portfolio</title>
 
 		<!-- Meta -->
 		<meta charset="utf-8">
@@ -43,6 +43,7 @@ ent<!DOCTYPE html>
 
 		<!-- Light style CSS -->
 		<link rel="stylesheet" href="assets/css/theme-light.css">
+		<link rel="stylesheet" href="assets/css/page-masonry-2.css">
 
 	</head>
 
@@ -57,7 +58,7 @@ ent<!DOCTYPE html>
 	* Use class "tt-lightmode-default" to enable light style by default (you must clear your browser's cookies and cache first!).
 	* Note: there may be classes that are specific to this page only!
 	-->
-	<body id="body" class="tt-transition tt-magic-cursor tt-smooth-scroll">
+	<body id="body" class="tt-transition tt-magic-cursor tt-smooth-scroll page-masonry-2">
 
 
 		<!-- *************************************
@@ -198,18 +199,7 @@ ent<!DOCTYPE html>
 						</a>
 						<!-- End header button -->
 
-						<!-- Begin style switch button -->
-						<div class="tt-style-switch">
-							<div class="tt-style-switch-inner tt-magnetic-item">
-								<div class="tt-stsw-light">
-									<i class="fas fa-sun"></i>
-								</div>
-								<div class="tt-stsw-dark">
-									<i class="fas fa-moon"></i>
-								</div>
-							</div>
-						</div>
-						<!-- End style switch button -->
+						
 
 					</div> <!-- /.header-col -->
 				</div> <!-- /.header-inner -->
@@ -235,6 +225,13 @@ ent<!DOCTYPE html>
 				* Use class "ph-bg-is-light" if needed, it makes the elements dark and more visible if you use a very light background image (effect only if the image/video exist).
 				-->
 				<div id="page-header" class="ph-full ph-full-m ph-cap-xxxxlg ph-center ph-image-parallax ph-caption-parallax">
+					 <!-- Sfondo immagine dietro al titolo -->
+				  <div class="ph-image ph-image-cover-2">
+					<div class="ph-image-inner">
+					  <!-- usa lo stesso src rimosso dalla bio -->
+					  <img src="assets\img\portfolio\1920\backspaceclub.png" alt="About background">
+					</div>
+				  </div>
 
 					<!-- Begin page header image 
 					============================= 
@@ -268,10 +265,10 @@ ent<!DOCTYPE html>
 						
 						<div class="ph-caption">
 							<div class="ph-caption-inner">
-								<h2 class="ph-caption-subtitle">My Work</h2>
-								<h1 class="ph-caption-title">Projects</h1>
+								<h2 class="ph-caption-subtitle">Progetto</h2>
+								<h1 class="ph-caption-title">Space</h1>
 								<div class="ph-caption-description max-width-700">
-									Discover a showcase of my creative journey that reflects my passion for crafting engaging digital experiences
+									Scopri un'anteprima del progetto di rebranding e progettazione di merch in collaborazione con lo Space Club di Firenze
 								</div>
 							</div> <!-- /.ph-caption-inner -->
 						</div> <!-- /.ph-caption -->
@@ -287,10 +284,10 @@ ent<!DOCTYPE html>
 
 							<div class="ph-caption">
 								<div class="ph-caption-inner">
-									<h2 class="ph-caption-subtitle">Portfolio</h2>
-									<h1 class="ph-caption-title">Cool Stuff</h1>
+									<h2 class="ph-caption-subtitle">Progetto</h2>
+									<h1 class="ph-caption-title">Club</h1>
 									<div class="ph-caption-description max-width-700">
-										Explore a collection of my creative journey, showcasing my passion for designing immersive digital experiences
+									
 									</div>
 								</div> <!-- /.ph-caption-inner -->
 							</div> <!-- /.ph-caption -->
@@ -358,7 +355,7 @@ ent<!DOCTYPE html>
 							* Use class "pgi-cap-center" to position portfolio grid item caption to center.
 							* Use class "pgi-cap-inside" to position portfolio grid item caption to inside.
 							--> 
-							<div id="portfolio-grid" class="pgi-hover pgi-cap-inside">
+							<div id="portfolio-grid" class="pgi-hover">
 
 								<!-- Begin tt-Grid
 								=================== 
@@ -376,48 +373,7 @@ ent<!DOCTYPE html>
 									================================ -->
 									<div class="tt-grid-top">
 
-										<!-- Begin tt-Ggrid categories/filter
-										====================================== -->
-										<div class="tt-grid-categories">
-
-											<!-- Begin tt-Ggrid categories trigger 
-											======================================= 
-											* Use class "ttgr-cat-fixed" to enable categories trigger fixed position.
-											* Use class "ttgr-cat-colored" to enable categories trigger colored style.
-											-->
-											<div class="ttgr-cat-trigger-wrap">
-												<div class="ttgr-cat-trigger-holder">
-													<a href="#portfolio-grid" class="ttgr-cat-trigger" data-offset="150">
-														<div class="ttgr-cat-text hide-cursor">
-															<span data-hover="Open">Filter</span>
-														</div>
-													</a> <!-- /.ttgr-cat-trigger -->
-												</div> <!-- /.ttgr-cat-trigger-holder -->
-											</div>
-											<!-- End tt-Ggrid categories trigger -->
-
-											<!-- Begin tt-Ggrid categories nav 
-											=================================== -->
-											<div class="ttgr-cat-nav">
-												<div class="ttgr-cat-close-btn">Close <i class="fas fa-times"></i></div> <!-- For mobile devices! -->
-												<div class="ttgr-cat-list-holder cursor-close" data-lenis-prevent>
-													<div class="ttgr-cat-list-inner">
-														<div class="ttgr-cat-list-content">
-															<ul class="ttgr-cat-list hide-cursor">
-																<li class="ttgr-cat-item"><a href="#" class="active">All</a></li>
-																<li class="ttgr-cat-item"><a href="#" data-filter=".lifestyle">Lifestyle</a></li>
-																<li class="ttgr-cat-item"><a href="#" data-filter=".artistic">Artistic</a></li>
-																<li class="ttgr-cat-item"><a href="#" data-filter=".wellness">Wellness</a></li>
-															</ul>
-														</div> <!-- /.ttgr-cat-links-content -->
-													</div> <!-- /.ttgr-cat-links-inner -->
-												</div> <!-- /.ttgr-cat-links-holder -->
-											</div>
-											<!-- End tt-Ggrid categories nav -->
-
-										</div>
-										<!-- End tt-Ggrid categories/filter-->
-
+										
 									</div>
 									<!-- End tt-Grid top content -->
 
@@ -436,15 +392,15 @@ ent<!DOCTYPE html>
 												* Use class "pgi-image-is-light" if needed, it makes the caption visible better if you use light image (only effect if "pgi-cap-inside" is enabled on "portfolio-grid"! Also no effect on small screens!).
 												-->
 												<div class="portfolio-grid-item">
-													<a href="assets/img/portfolio/1200/portfolio-1.jpg"
+													<a href="assets\img\portfolio\1920\space-pres-abb-4.png"
 													   class="pgi-image-wrap"
 													   data-fancybox="masonry"
-													   data-caption="Tortillas">
+													   data-caption="T-shirts">
 														<!-- Use class "cover-opacity-*" to set image overlay if needed. For example "cover-opacity-2". Useful if class "pgi-cap-inside" is enabled on "portfolio-grid". Note: It is individual and depends on the image you use. More info about helper classes in file "helper.css". -->
 														<div class="pgi-image-holder cover-opacity-2">
 															<div class="pgi-image-inner tt-anim-zoomin">
 																<figure class="pgi-image ttgr-height">
-																	<img src="assets/img/portfolio/800/portfolio-1.jpg" loading="lazy" alt="image">
+																	<img src="assets\img\portfolio\1920\space-pres-abb-4.png" loading="lazy" alt="image">
 																</figure> <!-- /.pgi-image -->
 															</div> <!-- /.pgi-image-inner -->
 														</div> <!-- /.pgi-image-holder -->
@@ -453,12 +409,12 @@ ent<!DOCTYPE html>
 													<div class="pgi-caption">
 														<div class="pgi-caption-inner">
 															<h2 class="pgi-title">
-																 <a href="assets/img/portfolio/1200/portfolio-1.jpg"
+																 <a href="assets\img\portfolio\1920\space-pres-abb-4.png"
 																     data-fancybox="masonry"
-																     data-caption="Tortillas">Tortillas</a>
+																     data-caption="T-shirts">T-shirts</a>
 															</h2>
 															<div class="pgi-categories-wrap">
-																<div class="pgi-category">Lifestyle</div>
+																<div class="pgi-category">Merch</div>
 																<!-- <a href="" class="pgi-category">Varia</a -->
 															</div> <!-- /.pli-categories-wrap -->
 														</div> <!-- /.pgi-caption-inner -->
@@ -480,15 +436,15 @@ ent<!DOCTYPE html>
 												* Use class "pgi-image-is-light" if needed, it makes the caption visible better if you use light image (only effect if "pgi-cap-inside" is enabled on "portfolio-grid"!).
 												-->
 												<div class="portfolio-grid-item pgi-image-is-light">
-													<a href="assets/img/portfolio/1200/portfolio-2.jpg"
+													<a href="assets\img\portfolio\1920\space-pres-abb-3.png"
 													   class="pgi-image-wrap"
 													   data-fancybox="masonry"
-													   data-caption="Tortillas">
+													   data-caption="Hoodie">
 														<!-- Use class "cover-opacity-*" to set image overlay if needed. For example "cover-opacity-2". Useful if class "pgi-cap-inside" is enabled on "portfolio-grid". Note: It is individual and depends on the image you use. More info about helper classes in file "helper.css". -->
 														<div class="pgi-image-holder">
 															<div class="pgi-image-inner tt-anim-zoomin">
 																<figure class="pgi-image ttgr-height">
-																	<img src="assets/img/portfolio/800/portfolio-2.jpg" loading="lazy" alt="image">
+																	<img src="assets\img\portfolio\1920\space-pres-abb-3.png" loading="lazy" alt="image">
 																</figure> <!-- /.pgi-image -->
 															</div> <!-- /.pgi-image-inner -->
 														</div> <!-- /.pgi-image-holder -->
@@ -497,12 +453,12 @@ ent<!DOCTYPE html>
 													<div class="pgi-caption">
 														<div class="pgi-caption-inner">
 															<h2 class="pgi-title">
-																 <a href="assets/img/portfolio/1200/portfolio-2.jpg"
+																 <a href="assets\img\portfolio\1920\space-pres-abb-3.png"
 																     data-fancybox="masonry"
-																     data-caption="Tortillas">Tortillas</a>
+																     data-caption="Hoodie">Hoodie</a>
 															</h2>
 															<div class="pgi-categories-wrap">
-																<div class="pgi-category">Lifestyle</div>
+																<div class="pgi-category">Merch</div>
 																<!-- <div class="pgi-category">Varia</div> -->
 															</div> <!-- /.pli-categories-wrap -->
 														</div> <!-- /.pgi-caption-inner -->
@@ -524,18 +480,15 @@ ent<!DOCTYPE html>
 												* Use class "pgi-image-is-light" if needed, it makes the caption visible better if you use light image (only effect if "pgi-cap-inside" is enabled on "portfolio-grid"!).
 												-->
 												<div class="portfolio-grid-item">
-													<a href="assets/img/portfolio/1200/portfolio-3.jpg"
+													<a href="assets\img\portfolio\1920\space-pres-abb-5.png"
 													   class="pgi-image-wrap"
 													   data-fancybox="masonry"
-													   data-caption="Tortillas">
+													   data-caption="Gadgets">
 														<!-- Use class "cover-opacity-*" to set image overlay if needed. For example "cover-opacity-2". Useful if class "pgi-cap-inside" is enabled on "portfolio-grid". Note: It is individual and depends on the image you use. More info about helper classes in file "helper.css". -->
 														<div class="pgi-image-holder cover-opacity-2">
 															<div class="pgi-image-inner tt-anim-zoomin">
-																<figure class="pgi-video-wrap ttgr-height">
-																	<video class="pgi-video" loop muted preload="metadata" poster="assets/vids/800/video-4-800.jpg">
-																		<source src="assets/vids/placeholder.mp4" data-src="assets/vids/800/video-4-800.mp4" type="video/mp4">
-																		<source src="assets/vids/placeholder.webm" data-src="assets/vids/800/video-4-800.webm" type="video/webm">
-																	</video>
+																<figure class="pgi-image ttgr-height">
+																	<img src="assets\img\portfolio\1920\space-pres-abb-5.png" loading="lazy" alt="image">
 																</figure> <!-- /.pgi-video-wrap -->
 															</div> <!-- /.pgi-image-inner -->
 														</div> <!-- /.pgi-image-holder -->
@@ -544,12 +497,12 @@ ent<!DOCTYPE html>
 													<div class="pgi-caption">
 														<div class="pgi-caption-inner">
 															<h2 class="pgi-title">
-																 <a href="assets/img/portfolio/1200/portfolio-3.jpg"
+																 <a href="assets\img\portfolio\1920\space-pres-abb-5.png"
 																     data-fancybox="masonry"
-																     data-caption="Tortillas">Tortillas</a>
+																     data-caption="Gadgets">Gadgets</a>
 															</h2>
 															<div class="pgi-categories-wrap">
-																<div class="pgi-category">Artistic</div>
+																<div class="pgi-category">Merch</div>
 																<!-- <div class="pgi-category">Varia</div> -->
 															</div> <!-- /.pli-categories-wrap -->
 														</div> <!-- /.pgi-caption-inner -->
@@ -571,15 +524,15 @@ ent<!DOCTYPE html>
 												* Use class "pgi-image-is-light" if needed, it makes the caption visible better if you use light image (only effect if "pgi-cap-inside" is enabled on "portfolio-grid"!).
 												-->
 												<div class="portfolio-grid-item">
-													<a href="assets/img/portfolio/1200/portfolio-4.jpg"
+													<a href="assets\img\portfolio\1920\portfolio-8.png"
 													   class="pgi-image-wrap"
 													   data-fancybox="masonry"
-													   data-caption="Tortillas">
+													   data-caption="Zero">
 														<!-- Use class "cover-opacity-*" to set image overlay if needed. For example "cover-opacity-2". Useful if class "pgi-cap-inside" is enabled on "portfolio-grid". Note: It is individual and depends on the image you use. More info about helper classes in file "helper.css". -->
 														<div class="pgi-image-holder cover-opacity-2">
 															<div class="pgi-image-inner tt-anim-zoomin">
 																<figure class="pgi-image ttgr-height">
-																	<img src="assets/img/portfolio/800/portfolio-3-portrait.jpg" loading="lazy" alt="image">
+																	<img src="assets\img\portfolio\1920\portfolio-8.png" loading="lazy" alt="image">
 																</figure> <!-- /.pgi-image -->
 															</div> <!-- /.pgi-image-inner -->
 														</div> <!-- /.pgi-image-holder -->
@@ -588,12 +541,12 @@ ent<!DOCTYPE html>
 													<div class="pgi-caption">
 														<div class="pgi-caption-inner">
 															<h2 class="pgi-title">
-																  <a href="assets/img/portfolio/1200/portfolio-4.jpg"
+																  <a href="assets\img\portfolio\1920\portfolio-8.png"
 																     data-fancybox="masonry"
-																     data-caption="Tortillas">Tortillas</a>
+																     data-caption="Zero">Zero</a>
 															</h2>
 															<div class="pgi-categories-wrap">
-																<div class="pgi-category">Artistic</div>
+																<div class="pgi-category">Flayer</div>
 																<!-- <div class="pgi-category">Varia</div> -->
 															</div> <!-- /.pli-categories-wrap -->
 														</div> <!-- /.pgi-caption-inner -->
@@ -615,15 +568,15 @@ ent<!DOCTYPE html>
 												* Use class "pgi-image-is-light" if needed, it makes the caption visible better if you use light image (only effect if "pgi-cap-inside" is enabled on "portfolio-grid"!).
 												-->
 												<div class="portfolio-grid-item">
-													<a href="assets/img/portfolio/1200/portfolio-5.jpg"
+													<a href="assets\img\portfolio\1920\portfolio-7.png"
 													   class="pgi-image-wrap"
 													   data-fancybox="masonry"
-													   data-caption="Tortillas">
+													   data-caption="Gravity">
 														<!-- Use class "cover-opacity-*" to set image overlay if needed. For example "cover-opacity-2". Useful if class "pgi-cap-inside" is enabled on "portfolio-grid". Note: It is individual and depends on the image you use. More info about helper classes in file "helper.css". -->
 														<div class="pgi-image-holder cover-opacity-2">
 															<div class="pgi-image-inner tt-anim-zoomin">
 																<figure class="pgi-image ttgr-height">
-																	<img src="assets/img/portfolio/800/portfolio-4.jpg" loading="lazy" alt="image">
+																	<img src="assets\img\portfolio\1920\portfolio-7.png" loading="lazy" alt="image">
 																</figure> <!-- /.pgi-image -->
 															</div> <!-- /.pgi-image-inner -->
 														</div> <!-- /.pgi-image-holder -->
@@ -632,12 +585,12 @@ ent<!DOCTYPE html>
 													<div class="pgi-caption">
 														<div class="pgi-caption-inner">
 															<h2 class="pgi-title">
-																 <a href="assets/img/portfolio/1200/portfolio-5.jpg"
+																 <a href="assets\img\portfolio\1920\portfolio-7.png"
 																     data-fancybox="masonry"
-																     data-caption="Tortillas">Tortillas</a>
+																     data-caption="Gravity">Gravity</a>
 															</h2>
 															<div class="pgi-categories-wrap">
-																<div class="pgi-category">Wellness</div>
+																<div class="pgi-category">Flayer</div>
 																<!-- <div class="pgi-category">Varia</div> -->
 															</div> <!-- /.pli-categories-wrap -->
 														</div> <!-- /.pgi-caption-inner -->
@@ -659,15 +612,15 @@ ent<!DOCTYPE html>
 												* Use class "pgi-image-is-light" if needed, it makes the caption visible better if you use light image (only effect if "pgi-cap-inside" is enabled on "portfolio-grid"!).
 												-->
 												<div class="portfolio-grid-item">
-													<a href="assets/img/portfolio/1200/portfolio-6.jpg"
+													<a href="assets\img\portfolio\1920\portfolio-7-portrait.png"
 													   class="pgi-image-wrap"
 													   data-fancybox="masonry"
-													   data-caption="Tortillas">
+													   data-caption="Space Jam">
 														<!-- Use class "cover-opacity-*" to set image overlay if needed. For example "cover-opacity-2". Useful if class "pgi-cap-inside" is enabled on "portfolio-grid". Note: It is individual and depends on the image you use. More info about helper classes in file "helper.css". -->
 														<div class="pgi-image-holder cover-opacity-2">
 															<div class="pgi-image-inner tt-anim-zoomin">
 																<figure class="pgi-image ttgr-height">
-																	<img src="assets/img/portfolio/800/portfolio-5.jpg" loading="lazy" alt="image">
+																	<img src="assets\img\portfolio\1920\portfolio-7-portrait.png" loading="lazy" alt="image">
 																</figure> <!-- /.pgi-image -->
 															</div> <!-- /.pgi-image-inner -->
 														</div> <!-- /.pgi-image-holder -->
@@ -676,12 +629,12 @@ ent<!DOCTYPE html>
 													<div class="pgi-caption">
 														<div class="pgi-caption-inner">
 															<h2 class="pgi-title">
-																 <a href="assets/img/portfolio/1200/portfolio-6.jpg"
+																 <a href="assets\img\portfolio\1920\portfolio-7-portrait.png"
 																     data-fancybox="masonry"
-																     data-caption="Tortillas">Tortillas</a>
+																     data-caption="Space Jam">Space Jam</a>
 															</h2>
 															<div class="pgi-categories-wrap">
-																<div class="pgi-category">Lifestyle</div>
+																<div class="pgi-category">Flayer</div>
 																<!-- <div class="pgi-category">Varia</div> -->
 															</div> <!-- /.pli-categories-wrap -->
 														</div> <!-- /.pgi-caption-inner -->
@@ -703,15 +656,15 @@ ent<!DOCTYPE html>
 												* Use class "pgi-image-is-light" if needed, it makes the caption visible better if you use light image (only effect if "pgi-cap-inside" is enabled on "portfolio-grid"!).
 												-->
 												<div class="portfolio-grid-item">
-													<a href="assets/img/portfolio/1200/portfolio-7.jpg"
+													<a href="assets\img\portfolio\1920\portfolio-6-portrait.png"
 													   class="pgi-image-wrap"
 													   data-fancybox="masonry"
-													   data-caption="Tortillas">
+													   data-caption="Gravity">
 														<!-- Use class "cover-opacity-*" to set image overlay if needed. For example "cover-opacity-2". Useful if class "pgi-cap-inside" is enabled on "portfolio-grid". Note: It is individual and depends on the image you use. More info about helper classes in file "helper.css". -->
 														<div class="pgi-image-holder cover-opacity-2">
 															<div class="pgi-image-inner tt-anim-zoomin">
 																<figure class="pgi-image ttgr-height">
-																	<img src="assets/img/portfolio/800/portfolio-6-portrait.jpg" loading="lazy" alt="image">
+																	<img src="assets\img\portfolio\1920\portfolio-6-portrait.png" loading="lazy" alt="image">
 																</figure> <!-- /.pgi-image -->
 															</div> <!-- /.pgi-image-inner -->
 														</div> <!-- /.pgi-image-holder -->
@@ -720,12 +673,12 @@ ent<!DOCTYPE html>
 													<div class="pgi-caption">
 														<div class="pgi-caption-inner">
 															<h2 class="pgi-title">
-																 <a href="assets/img/portfolio/1200/portfolio-7.jpg"
+																 <a href="assets\img\portfolio\1920\portfolio-6-portrait.png"
 																     data-fancybox="masonry"
-																     data-caption="Tortillas">Tortillas</a>
+																     data-caption="Gravity">Gravity</a>
 															</h2>
 															<div class="pgi-categories-wrap">
-																<div class="pgi-category">Lifestyle</div>
+																<div class="pgi-category">Flayer</div>
 																<!-- <div class="pgi-category">Varia</div> -->
 															</div> <!-- /.pli-categories-wrap -->
 														</div> <!-- /.pgi-caption-inner -->
@@ -747,35 +700,39 @@ ent<!DOCTYPE html>
 												* Use class "pgi-image-is-light" if needed, it makes the caption visible better if you use light image (only effect if "pgi-cap-inside" is enabled on "portfolio-grid"!).
 												-->
 												<div class="portfolio-grid-item pgi-image-is-light">
-													<a href="assets/img/portfolio/1200/portfolio-8.jpg"
-													   class="pgi-image-wrap"
-													   data-fancybox="masonry"
-													   data-caption="Tortillas">
-														<!-- Use class "cover-opacity-*" to set image overlay if needed. For example "cover-opacity-2". Useful if class "pgi-cap-inside" is enabled on "portfolio-grid". Note: It is individual and depends on the image you use. More info about helper classes in file "helper.css". -->
-														<div class="pgi-image-holder">
-															<div class="pgi-image-inner tt-anim-zoomin">
-																<figure class="pgi-image ttgr-height">
-																	<img src="assets/img/portfolio/800/portfolio-7-portrait.jpg" loading="lazy" alt="image">
-																</figure> <!-- /.pgi-image -->
-															</div> <!-- /.pgi-image-inner -->
-														</div> <!-- /.pgi-image-holder -->
-													</a> <!-- /.pgi-image-wrap -->
-
-													<div class="pgi-caption">
-														<div class="pgi-caption-inner">
-															<h2 class="pgi-title">
-																 <a href="assets/img/portfolio/1200/portfolio-8.jpg"
-																     data-fancybox="masonry"
-																     data-caption="Tortillas">Tortillas</a>
-															</h2>
-															<div class="pgi-categories-wrap">
-																<div class="pgi-category">Wellness</div>
-																<!-- <div class="pgi-category">Varia</div> -->
-															</div> <!-- /.pli-categories-wrap -->
-														</div> <!-- /.pgi-caption-inner -->
-													</div> <!-- /.pgi-caption -->
+												  <a href="assets/img/portfolio/1920/space-easy-24-anim.mp4"
+												     class="pgi-image-wrap"
+												     data-fancybox="masonry"
+												     data-caption="Easy"
+												     data-type="video">
+												    <div class="pgi-image-holder">
+												      <div class="pgi-image-inner tt-anim-zoomin">
+												        <figure class="pgi-video-wrap ttgr-height">
+												          <video class="pgi-video" loop muted playsinline preload="metadata"
+												                 poster="assets/img/portfolio/1920/space-easy-24-thumb.jpg">
+												            <source src="assets/img/portfolio/1920/space-easy-24-anim.mp4" type="video/mp4">
+												            <source src="assets/img/portfolio/1920/space-easy-24-anim.webm" type="video/webm">
+												          </video>
+												        </figure>
+												      </div>
+												    </div>
+												  </a>
+												
+												  <div class="pgi-caption">
+												    <div class="pgi-caption-inner">
+												      <h2 class="pgi-title">
+												        <a href="assets/img/portfolio/1920/space-easy-24-anim.mp4"
+												           data-fancybox="masonry"
+												           data-caption="Easy"
+												           data-type="video">Easy</a>
+												      </h2>
+												      <div class="pgi-categories-wrap">
+												        <div class="pgi-category">Flayer</div>
+												      </div>
+												    </div>
+												  </div>
 												</div>
-												<!-- End portfolio grid item -->
+
 
 											</div> <!-- /.ttgr-item-inner -->
 										</div>
@@ -791,15 +748,15 @@ ent<!DOCTYPE html>
 												* Use class "pgi-image-is-light" if needed, it makes the caption visible better if you use light image (only effect if "pgi-cap-inside" is enabled on "portfolio-grid"!).
 												-->
 												<div class="portfolio-grid-item">
-													<a href="assets/img/portfolio/1200/portfolio-9.jpg"
+													<a href="assets\img\portfolio\1920\space-supernova.png"
 													   class="pgi-image-wrap"
 													   data-fancybox="masonry"
-													   data-caption="Tortillas">
+													   data-caption="Supernova">
 														<!-- Use class "cover-opacity-*" to set image overlay if needed. For example "cover-opacity-2". Useful if class "pgi-cap-inside" is enabled on "portfolio-grid". Note: It is individual and depends on the image you use. More info about helper classes in file "helper.css". -->
 														<div class="pgi-image-holder cover-opacity-2">
 															<div class="pgi-image-inner tt-anim-zoomin">
 																<figure class="pgi-image ttgr-height">
-																	<img src="assets/img/portfolio/800/portfolio-8.jpg" loading="lazy" alt="image">
+																	<img src="assets\img\portfolio\1920\space-supernova.png" loading="lazy" alt="image">
 																</figure> <!-- /.pgi-image -->
 															</div> <!-- /.pgi-image-inner -->
 														</div> <!-- /.pgi-image-holder -->
@@ -808,12 +765,12 @@ ent<!DOCTYPE html>
 													<div class="pgi-caption">
 														<div class="pgi-caption-inner">
 															<h2 class="pgi-title">
-																 <a href="assets/img/portfolio/1200/portfolio-9.jpg"
+																 <a href="assets\img\portfolio\1920\space-supernova.png"
 																     data-fancybox="masonry"
-																     data-caption="Tortillas">Tortillas</a>
+																     data-caption="Supernova">Supernova</a>
 															</h2>
 															<div class="pgi-categories-wrap">
-																<div class="pgi-category">Wellness</div>
+																<div class="pgi-category">Flayer</div>
 																<!-- <div class="pgi-category">Varia</div> -->
 															</div> <!-- /.pli-categories-wrap -->
 														</div> <!-- /.pgi-caption-inner -->
